@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.all_lions {
+    display: none;
+}
+
+.start {
+    display: none;
+}
+
+.question {
+    display: none;
+}
+
+.loading {
+    display: none;
+}
+
+.result {
+    display: none;
+}
+
+.container {
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+    background: #FFDF74;
+    padding: 0;
+}
+
+.main-btn {
+    all: unset;
+    background: #FFDF74;
+}
+
+.yourlion-img {
+    margin-top: 60px;
+    width: 100%;
+
+}
+
+.teststart-btn {
+    font-family: 'OTWelcomeRA';
+    all: unset;
+    background-color: white;
+    color: #FF9922;
+    border-radius: 60px;
+    max-width: 300px;
+    width: 100%;
+    height: 80px;
+    font-size: 30pt;
+    display: inline-block;
+    text-align: center;
+    margin: 60px;
+}
+
+.index-cont {
+    text-align: center;
+}
+
+.ft-flex-con{
+    margin-top: 25px;
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    height: 250px;
+}
+
+.ft-lion {
+    max-width: 300px;
+    width: 100%;
+    height: 250px;
+}
+
+.ft-grass {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+    display: inline-block;
+    margin-top: -110px;
+}
+
+/* 테스트 설명 부분 */
+.exlogo-con {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lion-logo {
+    max-width: 230px;
+    width: 100%;
+    height: 150px;
+}
+
+.ques-con {
+    text-align: center;
+}
+
+.ques-squ {
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.ques-hr {
+    width: 500px;
+    height: 3px; 
+    background-color: #FFC86F;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.ques-cir-con {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.ques-circle1 {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #FFC86F;
+    float: left;
+    margin: 5px;
+}
+
+.ques-circle2 {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #FFDF74;
+    float: left;
+    margin: 5px;
+}
+
+.ques-contbox {
+    text-align: center;
+    padding: 25px;
+}
+
+p {
+    font-family: 'CookieRun-Regular';
+    font-size: 16pt;
+}
+
+.exlogo-con {
+    text-align: center;
+}
+
+.start-btn {
+    display: block;
+    all: unset;
+    color: white;
+    background-color: #FFC86F;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    font-family: 'CookieRun-Regular';
+    font-size: 16pt;
+    margin-bottom: 30px;
+}   
+
+/* 질문 */
+#A {
+    display: block;
+    all: unset;
+    color: white;
+    background-color: #FFC86F;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-family: 'CookieRun-Regular';
+    font-size: 12pt;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+#B {
+    display: block;
+    all: unset;
+    color: white;
+    background-color: #FFC86F;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-family: 'CookieRun-Regular';
+    font-size: 12pt;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.result-img {
+    width: 300px;
+}
