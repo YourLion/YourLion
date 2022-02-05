@@ -319,3 +319,17 @@ p {
 .ques-contbox p:first-child{
     color : #FF9922;
 }
+
+/* 모든 유형 사자 */
+.order-img-con {
+    display: inline-block;
+}
+
+.order-img {
+    width: 100px;
+    height: 100px;
+}
+
+.order-img-name {
+    font-size: medium;
+}
