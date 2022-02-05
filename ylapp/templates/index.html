@@ -64,12 +64,13 @@
 
     <!-- 질문 --> 
     <article class="question"> 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" ></div>
-        </div>
         <div class="exlogo-con">
             <img class="lion-logo" src="{% static 'ylapp/img/title.png' %}" alt="title">
         </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" ></div>
+        </div>
+        
         
         <div class="ques-con">
             <div class="ques-squ">
@@ -95,9 +96,17 @@
 
     <!-- 로딩중 -->
     <article class="loading">
-        <div class="">
+        <div class="loading_css">
             <img class="" src="{% static 'ylapp/img/INTP.png' %}" alt="loading">
-            <img class="" src="{% static 'ylapp/img/loading-text.png' %}" alt="loading-text">
+            <p>
+                <span class="odd_number">★</span>
+                <span class="even_number">결</span>
+                <span class="odd_number">과</span>
+                <span class="even_number">분</span>
+                <span class="odd_number">석</span>
+                <span class="even_number">중</span>
+                <span class="odd_number">★</span>
+                </p>
             <!-- <p class="">결과분석중..</p> -->            
         </div>
     </article>
@@ -120,13 +129,17 @@
                     <p class="">당신의 사자 유형은...</p>
                     <h2 id="result-lion" class="">너 사자 이름</h2>
                     <img id="result-img" class="result-img" src="" alt="your lion">
-                    <p id="result-percentage" class="">한국 mbti 비율</p>
-                    <p id="result-explain" class="">설명</p>
-                    <p class="">최고의 궁합</p>
-                    <p class="">최악의 궁합</p>
-                    <button type="button" class="" onclick="again();">다시 하기</button>
-                    <button type="button" class="" onclick="all_lions();">모든 유형 사자 보기</button>
-                    <button type="button" class="" onclick="">사자 꾸미고 공유하기</button>
+                    <div class="result_ptags">
+                        <p id="result-percentage" class="">한국 mbti 비율</p>
+                        <p id="result-explain" class="">설명</p>
+                        <p class="">최고의 궁합</p>
+                        <p class="">최악의 궁합</p>
+                    </div>
+                    <div class="result_button">
+                        <button type="button" class="" onclick="again();">다시 하기</button>
+                        <button type="button" class="" onclick="all_lions();">모든 유형 사자 보기</button>
+                        <button type="button" class="" onclick="">사자 꾸미고 공유하기</button>
+                    </div>
                 </div>
             </div>  
         </div>
@@ -173,21 +186,21 @@
         // mbti 결과 정보 저장
         var mbti_information = {
             "ISTJ" : {'lion':'철저한 공무원 사자', 'explain':'체계적으로 자신들의 일, 가정, 삶을 구성해 나갈 때 기쁨을 얻습니다. 전통과 성실을 가치 있게 여깁니다. 해야할 것을 논리적으로 결정하고, 흐트러짐 없이 꾸준히 해나갑니다. 실용적인 논리력과 헌신적으로 임무를 수행하는 성격으로 묘사됩니다.', 'img':'static/img/ISTJ.png'},
-            "ISFJ" : {'lion':'게으른 완벽주의자', 'explain':'설명', 'img':'static/img/ISFJ.png'},
+            "ISFJ" : {'lion':'게으른 완벽주의자', 'explain':'설명', 'img':'static/ylapp/img/ISFJ.png'},
             "INFJ" : {'lion':'선한 낭만가득 사자', 'explain':'사람들의 동기를 이해하기 원하고, 다른 사람들에 대해 통찰력을 지니고 있습니다. 자신들의 확고한 가치를 양심적으로 수행합니다. 공동의 선을 추구하기 위한 명확한 비전을 개발합니다. 잠시 생각을 비우고 재충전할 수 있는 혼자만의 시간을 가지기를 원합니다.', 'img':'static/img/INFJ.png'},
             "INTJ" : {'lion':'가장 차가운 얼음 사자', 'explain':'자신의 아이디어를 실현하고, 목적을 성취하고자 하는 욕구를 지니고 있습니다. 관심 있는 특정 분야에 대한 그들의 방대한 지식을 다른 이들과 공유하고 싶어 합니다. 일을 조직화하고, 포괄적으로 수행합니다. 회의적이고 독립적이며, 자신과 타인들에 대한 능력과 수행에 높은 기준을 지니고 있습니다.', 'img':'static/img/INTJ.png'},
-            "ISTP" : {'lion':'무념무상 만능주의자 사자', 'explain':'설명', 'img':'static/img/ISTP.png'},
-            "ISFP" : {'lion':'경계하는 집순이 사자', 'explain':'설명', 'img':'static/img/ISFP.png'},
-            "INFP" : {'lion':'유유부단 예술가 사자', 'explain':'설명', 'img':'static/img/INFP.png'},
+            "ISTP" : {'lion':'무념무상 만능주의자 사자', 'explain':'설명', 'img':'static/ylapp/img/ISTP.png'},
+            "ISFP" : {'lion':'경계하는 집순이 사자', 'explain':'설명', 'img':'static/ylapp/img/ISFP.png'},
+            "INFP" : {'lion':'우유부단 예술가 사자', 'explain':'설명', 'img':'static/ylapp/img/INFP.png'},
             "INTP" : {'lion':'논리적인 로봇 사자', 'explain':'관심분야에 있어서 문제해결에 깊이 집중하는 모습을 보입니다. 회의적이며, 때로는 비판적이고, 항상 분석적입니다. 근본적인 문제를 해결하기 위한 논리적인 방안을 제안하는 것을 선호합니다. 타인과의 상호작용보다는 아이디어에 더 많은 관심을 가지고 있습니다.', 'img':'static/img/INTP.png'},
-            "ESTP" : {'lion':'스릴을 좋아하는 모험가 사자', 'explain':'설명', 'img':'static/img/ESTP.png'},
-            "ESFP" : {'lion':'활동적인 분위기메이커 사자', 'explain':'설명', 'img':'static/img/ESFP.png'},
-            "ENFP" : {'lion':'자유로운 무계획 사자', 'explain':'설명', 'img':'static/img/ENFP.png'},
-            "ENTP" : {'lion':'독창적인 발명가 사자', 'explain':'설명', 'img':'static/img/ENTP.png'},
-            "ESTJ" : {'lion':'호불호가 확실한 선비 사자', 'explain':'설명', 'img':'static/img/ESTJ.png'},
-            "ESFJ" : {'lion':'배려심이 많은 다정한 사자', 'explain':'설명', 'img':'static/img/ESFJ.png'},
-            "ENFJ" : {'lion':'정의로운 리더 사자', 'explain':'설명', 'img':'static/img/ENFJ.png'},
-            "ENTJ" : {'lion':'현실적인 전략가 사자', 'explain':'설명', 'img':'static/img/ENTJ.png'}
+            "ESTP" : {'lion':'스릴을 좋아하는 모험가 사자', 'explain':'설명', 'img':'static/ylapp/img/ESTP.png'},
+            "ESFP" : {'lion':'활동적인 분위기메이커 사자', 'explain':'설명', 'img':'static/ylapp/img/ESFP.png'},
+            "ENFP" : {'lion':'자유로운 무계획 사자', 'explain':'설명', 'img':'static/ylapp/img/ENFP.png'},
+            "ENTP" : {'lion':'독창적인 발명가 사자', 'explain':'설명', 'img':'static/ylapp/img/ENTP.png'},
+            "ESTJ" : {'lion':'호불호가 확실한 선비 사자', 'explain':'설명', 'img':'static/ylapp/img/ESTJ.png'},
+            "ESFJ" : {'lion':'배려심이 많은 다정한 사자', 'explain':'설명', 'img':'static/ylapp/img/ESFJ.png'},
+            "ENFJ" : {'lion':'정의로운 리더 사자', 'explain':'설명', 'img':'static/ylapp/img/ENFJ.png'},
+            "ENTJ" : {'lion':'현실적인 전략가 사자', 'explain':'설명', 'img':'static/ylapp/img/ENTJ.png'}
         }
 
         // mbti 비율 정보 저장
@@ -261,7 +274,7 @@
                 $(".loading").show();
 
                 // 1초 후 결과 보이기
-                setTimeout("result()", 1000);
+                setTimeout("result()", 2500);
                         
                 var mbti = "";
                 ($("#EI").val() < 2) ? mbti += "I" : mbti += "E"; 

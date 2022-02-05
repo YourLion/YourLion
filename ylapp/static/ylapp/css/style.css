@@ -1,3 +1,7 @@
+*{
+    margin : 0;
+    padding : 0;
+}
 @font-face {
     font-family: 'OTWelcomeRA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
@@ -33,7 +37,20 @@ article {
 .loading {
     display: none;
 }
-
+.loading_css{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loading img{
+    width : 450px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.loading_css p {
+    font-size : 39px;
+}
 .result {
     display: none;
 }
@@ -86,7 +103,7 @@ article {
 .ft-lion {
     max-width: 300px;
     width: 100%;
-    height: 250px;
+    height: 225px;
 }
 
 .ft-grass {
@@ -212,4 +229,83 @@ p {
 
 .result-img {
     width: 300px;
+}
+@keyframes colorchange{
+    0%{
+        color : #FF9922;
+    }
+    25%{
+        color : white;
+    }
+    50%{
+        color : #FF9922;
+    }
+    100%{
+        color : white;
+    }
+}
+.odd_number{
+    animation-duration: 3s;
+    animation-name : colorchange;
+}
+
+@keyframes colorchange2{
+    0%{
+        color : white;
+    }
+    25%{
+        color : #FF9922;
+    }
+    50%{
+        color : white;
+    }
+    100%{
+        color : #FF9922;
+    }
+}
+.even_number{
+    animation-duration: 3s;
+    animation-name : colorchange2;
+}
+
+.fa-home:before {
+    color : white;
+
+}
+
+.progress{
+    margin : 10px 0px 50px 0;
+    background-color: white;
+    border-radius: 100px;
+}
+.progress-bar{
+    background-color: #FF9922;
+    border-radius: 100px;
+}
+.result_ptags{
+    border : 5px solid orange;
+    border-radius: 20px;
+    padding : 20px 0;
+    margin : 20px;
+    
+}
+.result_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result_button button{
+    background-color: orange;
+    border-radius: 40px;
+    color : white;
+    padding  : 10px;
+    font-size : 30px;
+    box-shadow: 0px 10px black;
+    border : none;
+    width : 280px;
+    margin-bottom: 20px;
+}
+#result-lion::after{
+    background-color: orange;
+    width : 10px;
 }
