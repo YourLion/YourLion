@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+.body{
+    background-color: #d1d1d1;
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
 #result-lion{
     font-family: 'CookieRun-Regular';
 }
@@ -50,9 +57,12 @@ article {
     max-width: 600px;
     position: relative;
     margin: 0 auto;
-    background: #FFDF74;
+    background: #ffffff;
     padding: 0;
 }
+
+
+
 
 .main-btn {
     all: unset;
@@ -123,14 +133,14 @@ article {
 
 .ques-squ {
     display: inline-block;
-    width: 500px;
+    width: 1000px;
     height: 100%;
     background-color: white;
     border-radius: 30px;
 }
 
 .ques-hr {
-    width: 500px;
+    width: 1000px;
     height: 3px; 
     background-color: #FFC86F;
     margin-top: 8px;

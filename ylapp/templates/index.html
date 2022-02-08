@@ -1,28 +1,28 @@
-{% load static %} 
+<!-- 항상 맨 첫 줄에 상속 -->
+{% extends 'base.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>너의 사자는?</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'ylapp/css/style.css' %}">
-    
-</head>
 
-<body class="container">
-    <header class="">
-        <!-- 메인 버튼 -->
-        <button type="button" class="main-btn" onclick="main();"><i class="fas fa-home fa-3x"></i></button>   
-    </header>
+{% block css %}
+<link rel="stylesheet" href="{% static 'ylapp/css/style.css' %}">
+{% endblock css %}
 
-    <!-- 메인 -->
+
+{% block content %}
+
+
+
+<!--줄바꿈-->
+<br><br><br><br><br><br>
+
+
+
+<!-- 메인 -->
+<div class="container" >
     <article class="index">
         <div class="index-cont">
-            <img src="{% static 'ylapp/img/title.png' %}" id="yourlion-img" alt="title">
-            <button type="button" class="teststart-btn" onclick="situation();">테스트 시작</button>            
+            <!-- 여기에 메인 이미지? -->
+            <button type="button" class="teststart-btn" onclick="situation();">테스트 시작</button>
         </div>
     </article>
 
@@ -38,11 +38,13 @@
     </article>
 
     <!-- 테스트 설명 -->
-    <article class="start"> 
+    <article class="start">
+
         <div class="exlogo-con">
-            <img class="lion-logo" src="{% static 'ylapp/img/title.png' %}" alt="title">
         </div>
-        
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
         <div class="ques-con">
             <div class="ques-squ">
                 <div class="ques-cir-con">
@@ -56,22 +58,23 @@
                     <p>모두가 잠든 새벽...<br>동물원에 사자만 깨어있다.<br>사자들은 인간 몰래 동물원을 탈출해<br>초원으로 향하기로 마음먹는다.</p>
                     <img class="situation-img" src="{% static 'ylapp/img/situation-img.png' %}" alt="lion">
                 </div>
-                
+
                 <button type="button" class="start-btn" onclick="start();">탈출 시작</button>
-            </div>  
+            </div>
         </div>
     </article>
 
-    <!-- 질문 --> 
-    <article class="question"> 
+    <!-- 질문 -->
+    <article class="question">
         <div class="exlogo-con">
-            <img class="lion-logo" src="{% static 'ylapp/img/title.png' %}" alt="title">
+            <!--로고잇엇던곳-->
+
         </div>
         <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" ></div>
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
         </div>
-        
-        
+
+
         <div class="ques-con">
             <div class="ques-squ">
                 <div class="ques-cir-con">
@@ -86,10 +89,10 @@
                     <img class="situation-img" src="{% static 'ylapp/img/situation-img.png' %}" alt="lion">
                 </div>
                 <input id="type" type="hidden" value="type">
-                <button id="A" type="button" class="">선택A</button>
+                <button id="A" type="button" class="">선택A</button><br>
                 <button id="B" type="button" class="">선택B</button>
-                
-            </div>  
+
+            </div>
         </div>
 
     </article>
@@ -106,15 +109,16 @@
                 <span class="odd_number">석</span>
                 <span class="even_number">중</span>
                 <span class="odd_number">★</span>
-                </p>
-            <!-- <p class="">결과분석중..</p> -->            
+            </p>
+            <!-- <p class="">결과분석중..</p> -->
         </div>
     </article>
 
     <!-- 결과 -->
     <article class="result">
         <div class="exlogo-con">
-            <img class="lion-logo" src="{% static 'ylapp/img/title.png' %}" alt="title">
+            <!--로고잇엇던곳-->
+
         </div>
         <div class="ques-con">
             <div class="ques-squ">
@@ -134,7 +138,7 @@
                         <p id="result-explain" class="">설명</p>
 
                         <p class="">최고의 궁합</p>
-                  
+
                         <p class="">최악의 궁합</p>
 
                     </div>
@@ -144,179 +148,174 @@
                         <button type="button" class="" onclick="">사자 꾸미고 공유하기</button>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </article>
+</div>
 
-    <footer class="footer">
-        <div class="ft-flex-con">
-            <img class="ft-grass" src="{% static 'ylapp/img/footer-back-img.png' %}" alt="footer img">
-            <img class="ft-lion" src="{% static 'ylapp/img/ENFP.png' %}" alt="footer img">
-            <img class="ft-lion" src="{% static 'ylapp/img/ENFJ.png' %}" alt="footer img">
-            <img class="ft-lion" src="{% static 'ylapp/img/ISFJ.png' %}" alt="footer img">
-        </div>
-        
-    </footer>
+<!-- 문항 선택 정보 저장 -->
+<input type="hidden" id="EI" class="type" value="0">
+<input type="hidden" id="SN" class="type" value="0">
+<input type="hidden" id="TF" class="type" value="0">
+<input type="hidden" id="JP" class="type" value="0">
 
-    <!-- 문항 선택 정보 저장 -->
-    <input type="hidden" id="EI" class="type" value="0">
-    <input type="hidden" id="SN" class="type"  value="0">
-    <input type="hidden" id="TF" class="type" value="0">
-    <input type="hidden" id="JP" class="type" value="0">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+    var num = 1; // 현재 질문 번호
 
-    <script>
-        var num = 1; // 현재 질문 번호
+    // 질문 정보 담기
+    var q = {
+        1: { "title": "한자리에 모인 사자들은 탈출에 대해서 고민 중이다.", "type": "EI", "A": "주변 사자들과 대화하며 정보를 주고받는다", "B": "고민에 빠져 생각이 많아지며 말이 없어진다" },
+        2: { "title": "간신히 새벽에 동물원을 빠져나와 초원을 향해 달려가기 시작하는데..", "type": "JP", "A": "어젯밤 지도를 익혀두어 계획한 대로 달려간다", "B": "지도를 대충 보긴 했지만 일단 달리며 주변 상황을 관찰하고 판단한다" },
+        3: { "title": "초원을 향해 달려가는 중 친한 사자가 넘어졌다.", "type": "TF", "A": "&quot;일단 응급처치를 해야겠어.&quot;", "B": "&quot;괜찮아? 아프겠다..ㅠㅠ 걸을 수 있겠어?ㅠㅠ&quot;" },
+        4: { "title": "달리는 중 슬슬 배가 고프다. 사자들은 항상 먹던 풀이 있지만, 주위엔 처음 보는 풀들뿐..", "type": "SN", "A": "먹던 풀이 안전한데.. 좀 더 가면 먹던 풀이 있지 않을까?", "B": "죽지는 않겠지. 일단 먹어보자. 혹시 몰라 이게 더 맛있을지?" },
+        5: { "title": "초원에 가기 위해 평소에 체력을 키웠더니 내가 제일 잘 달린다. 옆 사자가 칭찬해주는데!", "type": "TF", "A": "평소에 열심히 운동하는 것 같지 않아 보였는데 제일 잘 달리네!", "B": "항상 꾸준히 운동하더니 역시 너는 대단해!" },
+        6: { "title": "초원으로 가다가 길을 잃었다.", "type": "SN", "A": "&quot;우선 내가 달려왔던 길로 되돌아가 볼까..?&quot; 하며 우선 침착한다.", "B": "&quot;이러다 초원이 아니라 아예 다른 곳에 도착하면 어쩌지?&quot; 하며 갖가지 생각이 든다." },
+        7: { "title": "조금만 더 가면 초원이라는 소문이 돌고 있다. 초원에 대해 생각해보기 시작하는데..", "type": "SN", "A": "푸른 풀이 가득한 곳! 기대된다!", "B": "만약 초원에 갔는데 나보다 더 강한 사자가 있으면 어떡하지?" },
+        8: { "title": "드디어 초원에 도착한 나, 그곳에서 나와 다른 동물원에서 온 사자를 만났다.", "type": "TF", "A": "여기까지 오느라 수고했어", "B": "우와 너도 동물원에서 왔구나! 여기까지 오는데 너무 힘들었지?" },
+        9: { "title": "초원에서의 첫 번째 저녁이 왔다. 무엇을 할 것인가?", "type": "EI", "A": "사자들을 불러모아 파티를 열자! 모닥불도 피우고 고기도 준비해야지!", "B": "달리느라 너무 지쳤어. 일단 혼자 쉬면서 생각을 정리하는 시간이 필요해" },
+        10: { "title": "잠들기 전, 내일 무엇을 할지 생각해본다.", "type": "JP", "A": "해보고 싶었던 것들을 미리 정리해왔지! 가장 먼저 할 것은 이거야!", "B": "돌아다니면서 하고 싶은 걸 찾아보자! 도착하니까 마음이 편하다!" },
+        11: { "title": "초원 생활을 하며 마음이 편해지니 슬슬 취미를 가지고 싶어진다!", "type": "EI", "A": "여러 사자와 어울릴 수 있는 모임이 좋겠어!", "B": "혼자서 편하게 할 수 있는 활동이 좋겠어!" },
+        12: { "title": "마음에 들었던 장소로 피크닉을 가기로 했는데, 도착하니 이미 그곳에는 다른 동물들로 꽉 차있다.", "type": "JP", "A": "다른 동물들이 갈 때까지 조금만 더 기다려보자. 아니면 내가 근처에 찾아둔 다른 장소도 있어!", "B": "그냥 우리 다른 곳으로 가서 놀자!" }
+    }
 
-        // 질문 정보 담기
-        var q = { 
-            1: {"title":"한자리에 모인 사자들은 탈출에 대해서 고민 중이다.", "type":"EI", "A":"주변 사자들과 대화하며 정보를 주고받는다", "B":"고민에 빠져 생각이 많아지며 말이 없어진다"},
-            2: {"title":"간신히 새벽에 동물원을 빠져나와 초원을 향해 달려가기 시작하는데..", "type":"JP", "A":"어젯밤 지도를 익혀두어 계획한 대로 달려간다", "B":"지도를 대충 보긴 했지만 일단 달리며 주변 상황을 관찰하고 판단한다"},
-            3: {"title":"초원을 향해 달려가는 중 친한 사자가 넘어졌다.", "type":"TF", "A":"&quot;일단 응급처치를 해야겠어.&quot;", "B":"&quot;괜찮아? 아프겠다..ㅠㅠ 걸을 수 있겠어?ㅠㅠ&quot;"},
-            4: {"title":"달리는 중 슬슬 배가 고프다. 사자들은 항상 먹던 풀이 있지만, 주위엔 처음 보는 풀들뿐..", "type":"SN", "A":"먹던 풀이 안전한데.. 좀 더 가면 먹던 풀이 있지 않을까?", "B":"죽지는 않겠지. 일단 먹어보자. 혹시 몰라 이게 더 맛있을지?"},
-            5: {"title":"초원에 가기 위해 평소에 체력을 키웠더니 내가 제일 잘 달린다. 옆 사자가 칭찬해주는데!", "type":"TF", "A":"평소에 열심히 운동하는 것 같지 않아 보였는데 제일 잘 달리네!", "B":"항상 꾸준히 운동하더니 역시 너는 대단해!"},
-            6: {"title":"초원으로 가다가 길을 잃었다.", "type":"SN", "A":"&quot;우선 내가 달려왔던 길로 되돌아가 볼까..?&quot; 하며 우선 침착한다.", "B":"&quot;이러다 초원이 아니라 아예 다른 곳에 도착하면 어쩌지?&quot; 하며 갖가지 생각이 든다."},
-            7: {"title":"조금만 더 가면 초원이라는 소문이 돌고 있다. 초원에 대해 생각해보기 시작하는데..", "type":"SN", "A":"푸른 풀이 가득한 곳! 기대된다!", "B":"만약 초원에 갔는데 나보다 더 강한 사자가 있으면 어떡하지?"},
-            8: {"title":"드디어 초원에 도착한 나, 그곳에서 나와 다른 동물원에서 온 사자를 만났다.", "type":"TF", "A":"여기까지 오느라 수고했어", "B":"우와 너도 동물원에서 왔구나! 여기까지 오는데 너무 힘들었지?"},
-            9: {"title":"초원에서의 첫 번째 저녁이 왔다. 무엇을 할 것인가?", "type":"EI", "A":"사자들을 불러모아 파티를 열자! 모닥불도 피우고 고기도 준비해야지!", "B":"달리느라 너무 지쳤어. 일단 혼자 쉬면서 생각을 정리하는 시간이 필요해"},
-            10: {"title":"잠들기 전, 내일 무엇을 할지 생각해본다.", "type":"JP", "A":"해보고 싶었던 것들을 미리 정리해왔지! 가장 먼저 할 것은 이거야!", "B":"돌아다니면서 하고 싶은 걸 찾아보자! 도착하니까 마음이 편하다!"},
-            11: {"title":"초원 생활을 하며 마음이 편해지니 슬슬 취미를 가지고 싶어진다!", "type":"EI", "A":"여러 사자와 어울릴 수 있는 모임이 좋겠어!", "B":"혼자서 편하게 할 수 있는 활동이 좋겠어!"},
-            12: {"title":"마음에 들었던 장소로 피크닉을 가기로 했는데, 도착하니 이미 그곳에는 다른 동물들로 꽉 차있다.", "type":"JP", "A":"다른 동물들이 갈 때까지 조금만 더 기다려보자. 아니면 내가 근처에 찾아둔 다른 장소도 있어!", "B":"그냥 우리 다른 곳으로 가서 놀자!"}
-        } 
+    // mbti 결과 정보 저장
+    var mbti_information = {
+        "ISTJ": { 'lion': '철저한 공무원 사자', 'explain': '체계적으로 자신들의 일, 가정, 삶을 구성해 나갈 때 기쁨을 얻습니다. 전통과 성실을 가치 있게 여깁니다. 해야할 것을 논리적으로 결정하고, 흐트러짐 없이 꾸준히 해나갑니다. 실용적인 논리력과 헌신적으로 임무를 수행하는 성격으로 묘사됩니다.', 'img': 'static/img/ISTJ.png' },
+        "ISFJ": { 'lion': '게으른 완벽주의자', 'explain': '설명', 'img': 'static/ylapp/img/ISFJ.png' },
+        "INFJ": { 'lion': '선한 낭만가득 사자', 'explain': '사람들의 동기를 이해하기 원하고, 다른 사람들에 대해 통찰력을 지니고 있습니다. 자신들의 확고한 가치를 양심적으로 수행합니다. 공동의 선을 추구하기 위한 명확한 비전을 개발합니다. 잠시 생각을 비우고 재충전할 수 있는 혼자만의 시간을 가지기를 원합니다.', 'img': 'static/img/INFJ.png' },
+        "INTJ": { 'lion': '가장 차가운 얼음 사자', 'explain': '자신의 아이디어를 실현하고, 목적을 성취하고자 하는 욕구를 지니고 있습니다. 관심 있는 특정 분야에 대한 그들의 방대한 지식을 다른 이들과 공유하고 싶어 합니다. 일을 조직화하고, 포괄적으로 수행합니다. 회의적이고 독립적이며, 자신과 타인들에 대한 능력과 수행에 높은 기준을 지니고 있습니다.', 'img': 'static/img/INTJ.png' },
+        "ISTP": { 'lion': '무념무상 만능주의자 사자', 'explain': '설명', 'img': 'static/ylapp/img/ISTP.png' },
+        "ISFP": { 'lion': '경계하는 집순이 사자', 'explain': '설명', 'img': 'static/ylapp/img/ISFP.png' },
+        "INFP": { 'lion': '우유부단 예술가 사자', 'explain': '설명', 'img': 'static/ylapp/img/INFP.png' },
+        "INTP": { 'lion': '논리적인 로봇 사자', 'explain': '관심분야에 있어서 문제해결에 깊이 집중하는 모습을 보입니다. 회의적이며, 때로는 비판적이고, 항상 분석적입니다. 근본적인 문제를 해결하기 위한 논리적인 방안을 제안하는 것을 선호합니다. 타인과의 상호작용보다는 아이디어에 더 많은 관심을 가지고 있습니다.', 'img': 'static/img/INTP.png' },
+        "ESTP": { 'lion': '스릴을 좋아하는 모험가 사자', 'explain': '설명', 'img': 'static/ylapp/img/ESTP.png' },
+        "ESFP": { 'lion': '활동적인 분위기메이커 사자', 'explain': '설명', 'img': 'static/ylapp/img/ESFP.png' },
+        "ENFP": { 'lion': '자유로운 무계획 사자', 'explain': '설명', 'img': 'static/ylapp/img/ENFP.png' },
+        "ENTP": { 'lion': '독창적인 발명가 사자', 'explain': '설명', 'img': 'static/ylapp/img/ENTP.png' },
+        "ESTJ": { 'lion': '호불호가 확실한 선비 사자', 'explain': '설명', 'img': 'static/ylapp/img/ESTJ.png' },
+        "ESFJ": { 'lion': '배려심이 많은 다정한 사자', 'explain': '설명', 'img': 'static/ylapp/img/ESFJ.png' },
+        "ENFJ": { 'lion': '정의로운 리더 사자', 'explain': '설명', 'img': 'static/ylapp/img/ENFJ.png' },
+        "ENTJ": { 'lion': '현실적인 전략가 사자', 'explain': '설명', 'img': 'static/ylapp/img/ENTJ.png' }
+    }
 
-        // mbti 결과 정보 저장
-        var mbti_information = {
-            "ISTJ" : {'lion':'철저한 공무원 사자', 'explain':'체계적으로 자신들의 일, 가정, 삶을 구성해 나갈 때 기쁨을 얻습니다. 전통과 성실을 가치 있게 여깁니다. 해야할 것을 논리적으로 결정하고, 흐트러짐 없이 꾸준히 해나갑니다. 실용적인 논리력과 헌신적으로 임무를 수행하는 성격으로 묘사됩니다.', 'img':'static/img/ISTJ.png'},
-            "ISFJ" : {'lion':'게으른 완벽주의자', 'explain':'설명', 'img':'static/ylapp/img/ISFJ.png'},
-            "INFJ" : {'lion':'선한 낭만가득 사자', 'explain':'사람들의 동기를 이해하기 원하고, 다른 사람들에 대해 통찰력을 지니고 있습니다. 자신들의 확고한 가치를 양심적으로 수행합니다. 공동의 선을 추구하기 위한 명확한 비전을 개발합니다. 잠시 생각을 비우고 재충전할 수 있는 혼자만의 시간을 가지기를 원합니다.', 'img':'static/img/INFJ.png'},
-            "INTJ" : {'lion':'가장 차가운 얼음 사자', 'explain':'자신의 아이디어를 실현하고, 목적을 성취하고자 하는 욕구를 지니고 있습니다. 관심 있는 특정 분야에 대한 그들의 방대한 지식을 다른 이들과 공유하고 싶어 합니다. 일을 조직화하고, 포괄적으로 수행합니다. 회의적이고 독립적이며, 자신과 타인들에 대한 능력과 수행에 높은 기준을 지니고 있습니다.', 'img':'static/img/INTJ.png'},
-            "ISTP" : {'lion':'무념무상 만능주의자 사자', 'explain':'설명', 'img':'static/ylapp/img/ISTP.png'},
-            "ISFP" : {'lion':'경계하는 집순이 사자', 'explain':'설명', 'img':'static/ylapp/img/ISFP.png'},
-            "INFP" : {'lion':'우유부단 예술가 사자', 'explain':'설명', 'img':'static/ylapp/img/INFP.png'},
-            "INTP" : {'lion':'논리적인 로봇 사자', 'explain':'관심분야에 있어서 문제해결에 깊이 집중하는 모습을 보입니다. 회의적이며, 때로는 비판적이고, 항상 분석적입니다. 근본적인 문제를 해결하기 위한 논리적인 방안을 제안하는 것을 선호합니다. 타인과의 상호작용보다는 아이디어에 더 많은 관심을 가지고 있습니다.', 'img':'static/img/INTP.png'},
-            "ESTP" : {'lion':'스릴을 좋아하는 모험가 사자', 'explain':'설명', 'img':'static/ylapp/img/ESTP.png'},
-            "ESFP" : {'lion':'활동적인 분위기메이커 사자', 'explain':'설명', 'img':'static/ylapp/img/ESFP.png'},
-            "ENFP" : {'lion':'자유로운 무계획 사자', 'explain':'설명', 'img':'static/ylapp/img/ENFP.png'},
-            "ENTP" : {'lion':'독창적인 발명가 사자', 'explain':'설명', 'img':'static/ylapp/img/ENTP.png'},
-            "ESTJ" : {'lion':'호불호가 확실한 선비 사자', 'explain':'설명', 'img':'static/ylapp/img/ESTJ.png'},
-            "ESFJ" : {'lion':'배려심이 많은 다정한 사자', 'explain':'설명', 'img':'static/ylapp/img/ESFJ.png'},
-            "ENFJ" : {'lion':'정의로운 리더 사자', 'explain':'설명', 'img':'static/ylapp/img/ENFJ.png'},
-            "ENTJ" : {'lion':'현실적인 전략가 사자', 'explain':'설명', 'img':'static/ylapp/img/ENTJ.png'}
-        }
+    // mbti 비율 정보 저장
+    var mbti_percentage = {
+        "ISTJ": { 'percentage': '전체 인구 중 25%에 해당하는 당신!' },
+        "ISFJ": { 'percentage': '전체 인구 중 8%에 해당하는 당신!' },
+        "INFJ": { 'percentage': '전체 인구 중 2%에 해당하는 당신!' },
+        "INTJ": { 'percentage': '전체 인구 중 4%에 해당하는 당신!' },
+        "ISTP": { 'percentage': '전체 인구 중 9%에 해당하는 당신!' },
+        "ISFP": { 'percentage': '전체 인구 중 7%에 해당하는 당신!' },
+        "INFP": { 'percentage': '전체 인구 중 3%에 해당하는 당신!' },
+        "INTP": { 'percentage': '전체 인구 중 3%에 해당하는 당신!' },
+        "ESTP": { 'percentage': '전체 인구 중 6%에 해당하는 당신!' },
+        "ESFP": { 'percentage': '전체 인구 중 5%에 해당하는 당신!' },
+        "ENFP": { 'percentage': '전체 인구 중 4%에 해당하는 당신!' },
+        "ENTP": { 'percentage': '전체 인구 중 2%에 해당하는 당신!' },
+        "ESTJ": { 'percentage': '전체 인구 중 15%에 해당하는 당신!' },
+        "ESFJ": { 'percentage': '전체 인구 중 5%에 해당하는 당신!' },
+        "ENFJ": { 'percentage': '전체 인구 중 1%에 해당하는 당신!' },
+        "ENTJ": { 'percentage': '전체 인구 중 2%에 해당하는 당신!' }
+    }
 
-        // mbti 비율 정보 저장
-        var mbti_percentage = {
-            "ISTJ" : {'percentage':'전체 인구 중 25%에 해당하는 당신!'},
-            "ISFJ" : {'percentage':'전체 인구 중 8%에 해당하는 당신!'},
-            "INFJ" : {'percentage':'전체 인구 중 2%에 해당하는 당신!'},
-            "INTJ" : {'percentage':'전체 인구 중 4%에 해당하는 당신!'},
-            "ISTP" : {'percentage':'전체 인구 중 9%에 해당하는 당신!'},
-            "ISFP" : {'percentage':'전체 인구 중 7%에 해당하는 당신!'},
-            "INFP" : {'percentage':'전체 인구 중 3%에 해당하는 당신!'},
-            "INTP" : {'percentage':'전체 인구 중 3%에 해당하는 당신!'},
-            "ESTP" : {'percentage':'전체 인구 중 6%에 해당하는 당신!'},
-            "ESFP" : {'percentage':'전체 인구 중 5%에 해당하는 당신!'},
-            "ENFP" : {'percentage':'전체 인구 중 4%에 해당하는 당신!'},
-            "ENTP" : {'percentage':'전체 인구 중 2%에 해당하는 당신!'},
-            "ESTJ" : {'percentage':'전체 인구 중 15%에 해당하는 당신!'},
-            "ESFJ" : {'percentage':'전체 인구 중 5%에 해당하는 당신!'},
-            "ENFJ" : {'percentage':'전체 인구 중 1%에 해당하는 당신!'},
-            "ENTJ" : {'percentage':'전체 인구 중 2%에 해당하는 당신!'}
-        }
+    // 메인버튼 눌렀을 때
+    function main() {
+        $(".index").show();
+        $(".start").hide();
+        $(".question").hide();
+        $(".result").hide();
+        $(".all_lions").hide();
+        $(".type").val(0);
+        num = 1;
+    }
 
-        // 메인버튼 눌렀을 때
-        function main() {
-            $(".index").show();
-            $(".start").hide();
+    // 테스트 시작 눌렀을 때
+    function situation() {
+        $(".index").hide();
+        $(".start").show();
+    }
+
+    // 탈출시작 눌렀을 때
+    function start() {
+        $(".start").hide();
+        $(".question").show();
+        next();
+    }
+
+    // 선택A가 클릭 되었을 때
+    $("#A").click(function () {
+        var type = $("#type").val();
+        var preValue = $("#" + type).val();
+        $("#" + type).val(parseInt(preValue) + 1);
+        next();
+    });
+    // 선택B가 클릭 되었을 때
+    $("#B").click(function () {
+        next();
+    });
+
+    //결과 보이기
+    function result() {
+        $(".result").show();
+        $(".loading").hide();
+    }
+
+    // 다음 질문으로 넘어갈 때
+    function next() {
+        // 질문이 끝났을 때
+        if (num == 13) {
+            // 로딩중
             $(".question").hide();
-            $(".result").hide();
-            $(".all_lions").hide();
-            $(".type").val(0);
-            num = 1;
+            $(".loading").show();
+
+            // 1초 후 결과 보이기
+            setTimeout("result()", 2500);
+
+            var mbti = "";
+            ($("#EI").val() < 2) ? mbti += "I" : mbti += "E";
+            ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
+            ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
+            ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
+
+            $("#result-img").attr('src', mbti_information[mbti]["img"]);
+            $("#result-lion").html(mbti_information[mbti]["lion"]);
+            $("#result-explain").html(mbti_information[mbti]["explain"]);
+            $("#result-percentage").html(mbti_percentage[mbti]["percentage"]);
         }
+        else {
+            $(".progress-bar").attr('style', 'width: calc(100/12*' + num + '%)')
 
-        // 테스트 시작 눌렀을 때
-        function situation() {
-            $(".index").hide();
-            $(".start").show();
+            $("#question-title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q[num]["A"]);
+            $("#B").html(q[num]["B"]);
+            num++;
         }
+    }
 
-        // 탈출시작 눌렀을 때
-        function start() {
-            $(".start").hide(); 
-            $(".question").show();
-            next();
-        }
+    // 다시하기 눌렀을 때
+    function again() {
+        num = 1;
+        main();
+    }
 
-        // 선택A가 클릭 되었을 때
-        $("#A").click(function(){
-            var type = $("#type").val();
-            var preValue = $("#"+type).val();
-            $("#"+type).val(parseInt(preValue)+1); 
-            next();
-        });
-        // 선택B가 클릭 되었을 때
-            $("#B").click(function(){
-            next();
-        });
-
-        //결과 보이기
-        function result() {
-            $(".result").show();
-            $(".loading").hide();
-        }
-
-        // 다음 질문으로 넘어갈 때
-        function next() {
-            // 질문이 끝났을 때
-            if (num==13) {
-                // 로딩중
-                $(".question").hide();
-                $(".loading").show();
-
-                // 1초 후 결과 보이기
-                setTimeout("result()", 2500);
-                        
-                var mbti = "";
-                ($("#EI").val() < 2) ? mbti += "I" : mbti += "E"; 
-                ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
-                ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
-                ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
-
-                $("#result-img").attr('src', mbti_information[mbti]["img"]); 
-                $("#result-lion").html(mbti_information[mbti]["lion"]); 
-                $("#result-explain").html(mbti_information[mbti]["explain"]); 
-                $("#result-percentage").html(mbti_percentage[mbti]["percentage"]);
-            } 
-            else {
-                $(".progress-bar").attr('style', 'width: calc(100/12*'+num+'%)')
-                        
-                $("#question-title").html(q[num]["title"]);  
-                $("#type").val(q[num]["type"]); 
-                $("#A").html(q[num]["A"]);
-                $("#B").html(q[num]["B"]);
-                num++;                
-            }        
-        }
-
-        // 다시하기 눌렀을 때
-        function again() {
-            num = 1;
-            main();
-        }
-
-        // 모든 유형 보기 눌렀을 때
-        function all_lions() {
-            num = 1;
-            $(".all_lions").show();
-            $(".result").hide();
-        }
-    </script>
-    <!-- 웹 아이콘용 스크립트 -->
-    <script src="https://kit.fontawesome.com/92dfdaf3a2.js" crossorigin="anonymous"></script>
+    // 모든 유형 보기 눌렀을 때
+    function all_lions() {
+        num = 1;
+        $(".all_lions").show();
+        $(".result").hide();
+    }
 
 
-</body>
-</html>
+</script>
+<!-- 웹 아이콘용 스크립트 -->
+<script src="https://kit.fontawesome.com/92dfdaf3a2.js" crossorigin="anonymous"></script>
+
+{% endblock %}
