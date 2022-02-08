@@ -11,19 +11,30 @@
 {% block content %}
 
 
-
-<!--줄바꿈-->
-<br><br><br><br><br><br>
-
-
-
 <!-- 메인 -->
-<div class="container" >
+<div class="maintest">
     <article class="index">
         <div class="index-cont">
             <!-- 여기에 메인 이미지? -->
-            <button type="button" class="teststart-btn" onclick="situation();">테스트 시작</button>
-        </div>
+            <div class="ques-con">
+                <div class="ques-squ">
+                    <div class="ques-cir-con">
+                        <div class="ques-circle1"></div>
+                        <div class="ques-circle2"></div>
+                        <div class="ques-circle2"></div>
+                    </div>
+                    <hr class="ques-hr">
+                    <p class="info">어느날 눈을 떠보니 내가 사자가 되어있었다..</p>
+                    <p class="info-main">나의 사자 테스트</p>
+                    <img class="info-image" src="{% static 'ylapp/img/ENFP.png' %}" alt="">
+                    <br>
+                    <button type="button" class="start-btn" style="margin: 0px 0px 10px;" onclick="situation();">테스트 시작</button><br>
+                    <button type="button" class="start-btn" onclick="situation();">멋쟁이 사자처럼이란?</button><br>
+                    <img class="info-image" style="margin: 0px 0px 30px;" src="{% static 'ylapp/img/학교콜라보.png' %}" alt="">
+                    
+                </div>
+            </div>
+
     </article>
 
     <!-- 모든 유형 -->
@@ -39,12 +50,8 @@
 
     <!-- 테스트 설명 -->
     <article class="start">
+        
 
-        <div class="exlogo-con">
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
-        </div>
         <div class="ques-con">
             <div class="ques-squ">
                 <div class="ques-cir-con">
@@ -66,15 +73,9 @@
 
     <!-- 질문 -->
     <article class="question">
-        <div class="exlogo-con">
-            <!--로고잇엇던곳-->
-
-        </div>
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
         </div>
-
-
         <div class="ques-con">
             <div class="ques-squ">
                 <div class="ques-cir-con">
