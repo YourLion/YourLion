@@ -22,4 +22,6 @@ import ylapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ylapp.views.index, name='index'),
+    path('about/', ylapp.views.about, name='about'),
+    path('likelion/', ylapp.views.likelion, name='likelion'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
