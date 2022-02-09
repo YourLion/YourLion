@@ -1248,7 +1248,7 @@ fieldset {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: green;
+  background-color: rgb(107, 107, 107);
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
   transition: box-shadow 0.15s ease-in-out;

@@ -12,7 +12,12 @@
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .body{
     background-color: white;
@@ -24,6 +29,15 @@
 
 }
 
+.percent{
+    font-size: 15;
+    color:#979797
+}
+
+.lion-result{
+    font-size: 20;
+    color:#979797
+}
 
 .info-main{
     font-family: 'ONE-Mobile-POP';
@@ -77,8 +91,8 @@ article {
     align-items: center;
 }
 .loading img{
-    width : 450px;
-    height: 500px;
+    width : 80%;
+    height: auto;
     display: flex;
     justify-content: center;
 }
@@ -115,6 +129,15 @@ article {
 
 }
 
+.link-img{
+    padding: 8px;
+
+}
+
+.link-margin{
+    margin: 0px 0px 60px;
+}
+
 .teststart-btn {
     all: unset;
     background-color: white;
@@ -127,7 +150,7 @@ article {
     display: inline-block;
     text-align: center;
     margin: 60px;
-    font-family: 'KOTRAHOPE';
+    font-family: 'Cafe24Ssurround';
 }
 
 .index-cont {
@@ -167,14 +190,21 @@ article {
     height: 150px;
 }
 
+.lion-img{
+    max-width: 500px;
+    width: 80%
+}
+
 .ques-con {
     text-align: center;
 }
 
+
 .ques-squ {
+    max-width: 500px;
     margin-top: 100px;
     display: inline-block;
-    width: 80%;
+    width: 90%;
     height: auto;
     background-color: rgb(248, 248, 248);
     border-radius: 30px;
@@ -235,6 +265,19 @@ p {
     border-radius: 5px;
     width: 250px;
     height: 50px;
+    font-family: 'Cafe24Ssurround';
+    font-size: 16pt;
+    margin-bottom: 30px;
+}   
+
+.test-btn {
+    display: block;
+    all: unset;
+    color: white;
+    background-color: #FFC86F;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
     font-family: 'ONE-Mobile-POP';
     font-size: 16pt;
     margin-bottom: 30px;
@@ -244,12 +287,12 @@ p {
 #A {
     display: block;
     all: unset;
-    color: white;
+    color: WHITE;
     background-color: #FFC86F;
     border-radius: 5px;
-    width: 350px;
-    height: 50px;
-    font-family: 'KOTRAHOPE';
+    width: 250px;
+    height: 80px;
+    font-family: 'Cafe24Ssurround';
     font-size: 12pt;
     margin-bottom: 30px;
     padding: 10px;
@@ -258,32 +301,32 @@ p {
 #B {
     display: block;
     all: unset;
-    color: white;
+    color: WHITE;
     background-color: #FFC86F;
     border-radius: 5px;
-    width: 350px;
-    height: 50px;
-    font-family: 'KOTRAHOPE';
+    width: 250px;
+    height: 80px;
+    font-family: 'Cafe24Ssurround';
     font-size: 12pt;
     margin-bottom: 30px;
     padding: 10px;
 }
 
-.result-img {
+/* .result-img {
     width: 300px;
-}
+} */
 @keyframes colorchange{
     0%{
         color : #FF9922;
     }
     25%{
-        color : white;
+        color : rgb(95, 95, 95)
     }
     50%{
         color : #FF9922;
     }
     100%{
-        color : white;
+        color : rgb(95, 95, 95)
     }
 }
 .odd_number{
@@ -293,13 +336,13 @@ p {
 
 @keyframes colorchange2{
     0%{
-        color : white;
+        color : rgb(95, 95, 95)
     }
     25%{
         color : #FF9922;
     }
     50%{
-        color : white;
+        color : rgb(95, 95, 95)
     }
     100%{
         color : #FF9922;
@@ -324,14 +367,12 @@ p {
     background-color: #FF9922;
     border-radius: 100px;
 }
-.result_ptags{
-    border : 5px solid orange;
-    border-radius: 20px;
+/* .result_ptags{
     padding : 20px 0;
     margin : 20px;
     position : relative;
     
-}
+} */
 .result_button{
     display: flex;
     flex-direction: column;
@@ -368,5 +409,5 @@ p {
 }
 
 .ques-contbox p:first-child{
-    color : #FF9922;
+    color : rgb(95, 95, 95);
 }
