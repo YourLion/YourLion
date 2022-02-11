@@ -4,10 +4,60 @@
 
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'ylapp/css/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'ylapp/css/about.css' %}">
 {% endblock css %}
 
 
 {% block content %}
-test
+
+<div class="outer">
+    <div class="info-main">
+        <p style="font-size: 30; margin-bottom: 5px;"><span style="color: #FFC86F;">✦</span> 멋쟁이사자처럼? <span
+                style="color: #FFC86F;">✦</span></p>
+    </div>
+    <div class="div-style">
+        <div class="ques-cir-con">
+            <div class="ques-circle1"></div>
+            <div class="ques-circle2"></div>
+            <div class="ques-circle2"></div>
+        </div>
+
+        <hr class="ques-hr">
+        <article class="about">
+            <p style="margin-top: 16px;">
+                여기에 멋사 소개 어쩌구 저쩌구
+                <br>
+                <a style="color: orange; text-decoration: underline; font-size: 15;" href="">바로가기</a>
+            </P>
+
+        </article>
+    </div>
+    <div class="info-main">
+        <p style="font-size: 30; margin-top: 70px; margin-bottom: 5px;"><span style="color: #FFC86F;">✦</span> 멋사 at SKHU
+            <span style="color: #FFC86F;">✦</span></p>
+    </div>
+    <div class="div-style">
+        <div class="ques-cir-con">
+            <div class="ques-circle1"></div>
+            <div class="ques-circle2"></div>
+            <div class="ques-circle2"></div>
+        </div>
+
+        <hr class="ques-hr">
+        <article class="about">
+            <p style="margin-top: 16px;">
+                여기에 소개 어쩌구 저쩌구
+                <br>
+                <a style="color: orange; text-decoration: underline; font-size: 15;" href="">바로가기</a>
+            </P>
+            
+        </article>
+    </div>
+</div>
+
+
+
+
+
 {% endblock %}

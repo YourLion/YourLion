@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
  @font-face {
   font-family: 'NanumSquareRound';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
@@ -60,7 +67,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: 'Cafe24Ssurround';
 }
-
 
 .font-green{
   color:#ffffff;
@@ -185,6 +191,8 @@ strong {
 
 small, .small {
   font-size: 0.875em;
+  color: #000000;
+  font-weight: 600;
 }
 
 mark, .mark {
@@ -1269,8 +1277,8 @@ fieldset {
 
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.0em;
+  height: 1.0em;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
@@ -3000,13 +3008,16 @@ html {
 
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #ffffff;
-  color: #fff;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #e2e2e2c4;
+  color: rgb(0, 0, 0);
+  font-family: 'Pretendard-Regular';
+  font-weight: 600;
 }
 
 .copyright {
-  background-color: #ffffff;
+  background-color: #e2e2e2;
 }
 

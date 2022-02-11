@@ -4,10 +4,102 @@
 
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'ylapp/css/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'ylapp/css/about.css' %}">
 {% endblock css %}
 
 
 {% block content %}
-test
+
+<div class="outer">
+    <div class="info-main">
+        <p style="font-size: 30; margin-bottom: 5px;"><span style="color: #FFC86F;">✦</span> Intro <span
+                style="color: #FFC86F;">✦</span></p>
+    </div>
+    <div class="div-style">
+        <div class="ques-cir-con">
+            <div class="ques-circle1"></div>
+            <div class="ques-circle2"></div>
+            <div class="ques-circle2"></div>
+        </div>
+
+        <hr class="ques-hr">
+        <article class="about">
+            <p style="margin-top: 16px;">안녕하세요! 저희는 성공회대학교 멋쟁이 사자처럼 10기 운영진들로 구성되어 있는 팀 '너의 사자는' 입니다. </p>
+            <p>저희가 제작한 '나의 사자 테스트'는 요즘 유행하는 MBTI를 기반으로 만들어진 테스트입니다.
+                <br>
+                직접 나만의 사자 이야기를 선택하고 16가지의 성격 유형 결과를 만나보세요!
+            </P>
+            <P>또한, 저희가 제작한 테스트처럼 다양한 프로젝트를 제작해 보고 싶다면 멋쟁이 사자처럼 소개 페이지도 있으니 많은 관심 부탁드립니다!<br>
+                <a style="color: orange; text-decoration: underline; font-size: 15;" href="{% url 'likelion' %}">멋쟁이 사자처럼 소개 페이지 바로가기</a>
+            </P>
+            <p>테스트 재미있게 즐겨주세요! 감사합니다 ♥︎</p>
+
+        </article>
+    </div>
+    <div class="info-main">
+        <p style="font-size: 30; margin-top: 70px; margin-bottom: 5px;"><span style="color: #FFC86F;">✦</span> Developer
+            <span style="color: #FFC86F;">✦</span></p>
+    </div>
+    <div class="div-style">
+        <div class="ques-cir-con">
+            <div class="ques-circle1"></div>
+            <div class="ques-circle2"></div>
+            <div class="ques-circle2"></div>
+        </div>
+
+        <hr class="ques-hr">
+        <article class="about">
+            <div>
+                <div class="people-box" style="">
+                    <img src="{% static 'ylapp/img/세은.jpg' %}" class="circle-img">
+                    <p class="name">조세은</p>
+                    <p class="info">✉️ duck_sim@naver.com<br>
+                        <img src="{% static 'ylapp/img/깃허브.png' %}" class="github"><a href="https://github.com/Joseeun">
+                            github.com/Joseeun</a>
+                    </p>
+                </div>
+                <div class="people-box">
+                    <img src="{% static 'ylapp/img/수진.jpeg' %}" class="circle-img">
+                    <p class="name">김수진</p>
+                    <p class="info">✉️ ksj030120@gmail.com<br>
+                        <img src="{% static 'ylapp/img/깃허브.png' %}" class="github"><a
+                            href="https://github.com/sujeengim"> github.com/sujeengim</a>
+                    </p>
+                </div>
+                <div class="people-box">
+                    <img src="{% static 'ylapp/img/은혜.jpeg' %}" class="circle-img">
+                    <p class="name">김은혜</p>
+                    <p class="info">✉️ lemonherb0323@naver.com<br>
+                        <img src="{% static 'ylapp/img/깃허브.png' %}" class="github"><a
+                            href="https://github.com/GraceKim527"> github.com/GraceKim527</a>
+                    </p>
+                </div>
+            </div class="people-box">
+            <div>
+                <div class="people-box">
+                    <img src="{% static 'ylapp/img/신아.jfif' %}" class="circle-img">
+                    <p class="name">김신아</p>
+                    <p class="info">✉️ sinaskim@naver.com<br>
+                        <img src="{% static 'ylapp/img/깃허브.png' %}" class="github"><a
+                            href="https://github.com/sinaskim"> github.com/sinaskim</a>
+                    </p>
+                </div>
+                <div class="people-box">
+                    <img src="{% static 'ylapp/img/주영빈.jpeg' %}" class="circle-img">
+                    <p class="name">주영빈</p>
+                    <p class="info">✉️ tonty1222@naver.com<br>
+                        <img src="{% static 'ylapp/img/깃허브.png' %}" class="github"><a href="https://github.com/Rommmu">
+                            github.com/Rommmu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+
+
+
+
 {% endblock %}

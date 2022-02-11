@@ -24,17 +24,17 @@
                         <div class="ques-circle2"></div>
                     </div>
                     <hr class="ques-hr">
-                    <p class="info">어느날 눈을 떠보니 내가 사자가 되어있었다..</p>
+                    <p class="info question-text">어느날 눈을 떠보니 내가 사자가 되어있었다..</p>
                     <p class="info-main">나의 사자 테스트</p>
+                    
                     <img class="lion-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="">
                     <br>
                     <button type="button" class="start-btn" style="margin: 0px 0px 10px;" onclick="situation();">테스트 시작</button><br>
                     <button type="button" class="start-btn" onclick=";">모든 사자 유형 보기</button><br>
-                    <img class="" style="max-width:300px; width: 80%; margin: 0px 0px 30px;" src="{% static 'ylapp/img/학교콜라보.png' %}" alt="">
+                    <img class="" style="max-width:100px; width: 80%; margin: 0px 0px 50px;" src="{% static 'ylapp/img/멋사.png' %}" alt="">
                     
                 </div>
             </div>
-
     </article>
 
     <!-- 모든 유형 -->
@@ -63,7 +63,7 @@
                 <hr class="ques-hr">
                 <div class="ques-contbox">
                     <img class="lion-img" src="{% static 'ylapp/img/사자달려.gif' %}" alt="lion">
-                    <p style="color: rgb(95, 95, 95); margin: 0px 0px 5px;">
+                    <p style="color: rgb(95, 95, 95); margin: 0px 0px 5px;" class="question-text">
                         모두가 잠든 새벽..<br>동물원에는 사자들만 깨어있다.<br>사자들은 인간 몰래 동물원을 탈출해<br>초원으로 향하기로 마음을 먹는데..</p>
                 </div>
 
@@ -86,8 +86,8 @@
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
                 </div>
-                <div class="ques-contbox">
-                    <p id="question-title" class="">질문</p>
+                <div class="ques-box">
+                    <p id="question-title" class="question-text" >질문</p>
                     
                 </div>
                 <input id="type" type="hidden" value="type">
@@ -111,8 +111,8 @@
 
                 <hr class="ques-hr">
         <div class="loading_css">
-            <img class="lion-img" src="{% static 'ylapp/img/INTP.png' %}" alt="loading">
-            <p>
+            <img style="margin-top: 80px;"class="lion-img" src="{% static 'ylapp/img/INTP.png' %}" alt="loading">
+            <p style="margin-bottom: 100px; " class="question-text">
                 <span class="odd_number">★</span>
                 <span class="even_number">결</span>
                 <span class="odd_number">과</span>
@@ -141,15 +141,15 @@
                     <p class="" style="margin: 0px 0px 5px;">당신의 사자 유형은...</p>
                     <h2 id="result-lion" class="">너 사자 이름</h2>
                     <img id="result-img" class="lion-img" src="" alt="your lion">
-                    <p id="result-percentage" class="percent">한국 mbti 비율</p>
+                    <p id="result-percentage" class="percent question-text">한국 mbti 비율</p>
                     <div class="result_ptags">
-                        <p style="color: #FFC86F;"> ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ </p>
+                        <p style="color: #FFC86F;" class="question-text"> ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ </p>
                         <p style="color: black;">🦁당신의 겉모습</p>
-                        <p id="result-explain" class="lion-result">설명</p>
+                        <p id="result-explain" class="lion-result question-text">설명</p>
                         <br>
                         <p>🦁당신의 속마음</p>
-                        <p id="result-explain" class="lion-result">설명</p>
-                        <p style="color: #FFC86F;"> ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ </p>
+                        <p id="result-explain" class="lion-result question-text">설명</p>
+                        <p style="color: #FFC86F;" class="question-text"> ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ </p>
 
                         <br>
 
@@ -157,12 +157,12 @@
                         <div>
                             <div style="float: left; margin-left: 30px;">
                                 <p class="">🧡최고의 궁합</p>
-                                <p id="result-best" class="lion-result">베스트</p>
+                                <p id="result-best" class="lion-result question-text">베스트</p>
                             </div>
 
                             <div style="float: right; margin-right: 30px;">
                                 <p class="">💢최악의 궁합</p>
-                                <p id="result-worst" class="lion-result">워스트</p>
+                                <p id="result-worst" class="lion-result question-text">워스트</p>
                             </div>
                         </div>
 
@@ -172,13 +172,14 @@
                         <div class="link-margin">
                         <img class="link-img" src="{% static 'ylapp/img/clipboard-share.png' %}" alt="share">
                         <img class="link-img" src="{% static 'ylapp/img/kakao-share.png' %}" alt="share">
-                        <img class="link-img" src="{% static 'ylapp/img/facebook-share.png' %}" alt="share">
-                        <img class="link-img" src="{% static 'ylapp/img/twitter-share.png' %}" alt="shares">
                         </div>
-
+                        <div class="link-page">
+                        <p style="margin-top: 10px; margin-bottom: 0px;" >나도 테스트를 만들어보고 싶다면?<br></p>
+                        <a style="color: orange; text-decoration: underline; font-size: 15; margin-bottom: 20px;" href="https://www.likelion.net/univ">멋쟁이사자처럼 바로가기</a>
+                        </div>
                     </div>
                         <button type="button" style="margin: 0px 0px 10px;" class="start-btn" onclick="again();">다시 하기</button>
-                        <button type="button" class="start-btn" onclick="all_lions();">모든 유형의 사자 보기</button>
+                        <button type="button" class="start-btn" onclick="all_lions();">모든 사자 유형 보기</button>
                 </div>
             </div>
         </div>

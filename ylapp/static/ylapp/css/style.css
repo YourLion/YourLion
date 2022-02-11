@@ -19,13 +19,20 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .body{
     background-color: white;
     max-width: 600px;
     position: relative;
     margin-top: 50px;
-
     padding: 0;
+    font-family: 'Pretendard-Regular';
 
 }
 
@@ -107,7 +114,6 @@ article {
     max-width: 600px;
     position: relative;
     margin: 0 auto;
-    background: #ffffff;
     padding: 0;
 }
 
@@ -135,7 +141,7 @@ article {
 }
 
 .link-margin{
-    margin: 0px 0px 60px;
+    margin: 0px 0px 10px;
 }
 
 .teststart-btn {
@@ -242,13 +248,17 @@ article {
     float: left;
     margin: 5px;
 }
-
+.ques-box {
+    text-align: center;
+    padding: 25px;
+    height: 230px;
+}
 .ques-contbox {
     text-align: center;
     padding: 25px;
 }
 
-p {
+.question-text {
     font-family: 'KOTRAHOPE';
     font-size: 16pt;
 }
@@ -359,13 +369,13 @@ p {
 }
 
 .progress{
-    margin : 10px 0px 50px 0;
-    background-color: white;
-    border-radius: 100px;
+    margin : 10px 0px 50px 0 !important;
+    background-color: white !important;
+    border-radius: 100px !important;
 }
 .progress-bar{
-    background-color: #FF9922;
-    border-radius: 100px;
+    background-color: #FF9922 !important;
+    border-radius: 100px !important;
 }
 /* .result_ptags{
     padding : 20px 0;
@@ -410,4 +420,10 @@ p {
 
 .ques-contbox p:first-child{
     color : rgb(95, 95, 95);
+}
+
+.link-page{
+    color: orange; font-size: 13;
+    font-family: 'Pretendard-Regular';
+    margin-bottom: 20px;
 }
