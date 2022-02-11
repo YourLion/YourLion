@@ -111,7 +111,7 @@
 
                 <hr class="ques-hr">
         <div class="loading_css">
-            <img class="lion-img" src="{% static 'ylapp/img/INTP.png' %}" alt="loading">
+            <img class="lion-img1" src="{% static 'ylapp/img/INTP.png' %}" alt="loading">
             <p>
                 <span class="odd_number">★</span>
                 <span class="even_number">결</span>
@@ -121,7 +121,6 @@
                 <span class="even_number">중</span>
                 <span class="odd_number">★</span>
             </p>
-            <!-- <p class="">결과분석중..</p> -->
         </div>
         </div>
     </article>
@@ -199,6 +198,34 @@
     crossorigin="anonymous"></script>
 
 <script>
+    const imgArray = new Array();
+    imgArray[0] ="{% static 'ylapp/img/ENFJ.png' %}";
+    imgArray[1] ="{% static 'ylapp/img/ENFP.png' %}";
+    imgArray[2] ="{% static 'ylapp/img/ENTJ.png' %}";
+    imgArray[3] ="{% static 'ylapp/img/ENTP.png' %}";
+    imgArray[4] ="{% static 'ylapp/img/ESFJ.png' %}";
+    imgArray[5] ="{% static 'ylapp/img/ESFP.png' %}";
+    imgArray[6] ="{% static 'ylapp/img/ESTJ.png' %}";
+    imgArray[7] ="{% static 'ylapp/img/ESTP.png' %}";
+    imgArray[8] ="{% static 'ylapp/img/INTJ.png' %}";
+    imgArray[9] ="{% static 'ylapp/img/INFP.png' %}";
+    imgArray[10] ="{% static 'ylapp/img/INTJ.png' %}";
+    imgArray[11] ="{% static 'ylapp/img/INTP.png' %}";
+    imgArray[12] ="{% static 'ylapp/img/ISFJ.png' %}";
+    imgArray[13] ="{% static 'ylapp/img/ISFP.png' %}";
+    imgArray[14] ="{% static 'ylapp/img/ISTJ.png' %}";
+    imgArray[15] ="{% static 'ylapp/img/ISTP.png' %}";
+
+    function ShowImage(){
+        const imgNum =  Math.round(Math.random()*15);
+        const obImg = document.querySelector(".lion-img1");
+        obImg.src = imgArray[imgNum];
+        setTimeout(ShowImage,100);
+    }
+
+    ShowImage();
+
+
     var num = 1; // 현재 질문 번호
 
     // 질문 정보 담기
