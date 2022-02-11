@@ -30,23 +30,65 @@
                     <img class="lion-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="">
                     <br>
                     <button type="button" class="start-btn" style="margin: 0px 0px 10px;" onclick="situation();">테스트 시작</button><br>
-                    <button type="button" class="start-btn" onclick=";">모든 사자 유형 보기</button><br>
+                    <button type="button" class="start-btn" onclick="all_lions();">모든 사자 유형 보기</button><br>
                     <img class="" style="max-width:100px; width: 80%; margin: 0px 0px 50px;" src="{% static 'ylapp/img/멋사.png' %}" alt="">
                     
                 </div>
             </div>
     </article>
 
-    <!-- 모든 유형 -->
+    <!-- 모든 유형 사자 -->
     <article class="all_lions">
         <div class="">
-            <button type="button" class="" onclick="">기본순</button>
-            <button type="button" class="" onclick="">비율높은순</button>
+            <button type="button" class="" onclick="order1();">기본순</button>
+            <button type="button" class="" onclick="order2();">비율높은순</button>
         </div>
-        <div class="">
-            <img class="" src="{% static 'ylapp/img/all_lions.png' %}" alt="all lions">
+        <!-- 기본순 -->
+        <div class="order1-con">
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}" alt="ISTJ"><div class="order-img-name">철저한<br>공무원 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}" alt="ISFJ"><div class="order-img-name">게으른<br>완벽주의자 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}" alt="INFJ"><div class="order-img-name">선한<br>낭만가득 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}" alt="INTJ"><div class="order-img-name">가장 차가운<br>얼음 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}" alt="ISTP"><div class="order-img-name">무념무상<br>만능주의자 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}" alt="ISFP"><div class="order-img-name">경계하는<br>집순이 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}" alt="INFP"><div class="order-img-name">우유부단<br>예술가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}" alt="INTP"><div class="order-img-name">논리적인<br>로봇 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}" alt="ESTP"><div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}" alt="ESFP"><div class="order-img-name">활동적인<br>분위기메이커 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="ENFP"><div class="order-img-name">자유로운<br>무계획 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}" alt="ENTP"><div class="order-img-name">독창적인<br>발명가 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}" alt="ESTJ"><div class="order-img-name">호불호가 확실한<br>선비 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}" alt="ESFJ"><div class="order-img-name">배려심 많은<br>다정한 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}" alt="ENFJ"><div class="order-img-name">정의로운<br>리더 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}" alt="ENTJ"><div class="order-img-name">현실적인<br>전략가 사자</div></div>
+        </div>
+        <!-- 비율높은순 -->
+        <div class="order2-con">
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}" alt="ISTJ"><div class="order-img-name">철저한<br>공무원 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}" alt="ESTJ"><div class="order-img-name">호불호가 확실한<br>선비 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}" alt="ISTP"><div class="order-img-name">무념무상<br>만능주의자 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}" alt="ISFJ"><div class="order-img-name">게으른<br>완벽주의자 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}" alt="ISFP"><div class="order-img-name">경계하는<br>집순이 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}" alt="ESTP"><div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}" alt="ESFJ"><div class="order-img-name">배려심 많은<br>다정한 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}" alt="ESFP"><div class="order-img-name">활동적인<br>분위기메이커 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}" alt="INTJ"><div class="order-img-name">가장 차가운<br>얼음 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="ENFP"><div class="order-img-name">자유로운<br>무계획 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}" alt="INFP"><div class="order-img-name">우유부단<br>예술가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}" alt="INTP"><div class="order-img-name">논리적인<br>로봇 사자</div></div>
+            <br>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}" alt="ENTJ"><div class="order-img-name">현실적인<br>전략가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}" alt="ENTP"><div class="order-img-name">독창적인<br>발명가 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}" alt="INFJ"><div class="order-img-name">선한<br>낭만가득 사자</div></div>
+            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}" alt="ENFJ"><div class="order-img-name">정의로운<br>리더 사자</div></div>
         </div>
     </article>
+
 
     <!-- 테스트 설명 -->
     <article class="start">
@@ -342,10 +384,21 @@
     // 모든 유형 보기 눌렀을 때
     function all_lions() {
         num = 1;
+        order1();
+        $(".index").hide();
         $(".all_lions").show();
         $(".result").hide();
     }
-
+    //기본순 눌렀을 때
+    function order1() {
+        $(".order1-con").show();
+        $(".order2-con").hide();
+    }
+    //비율높은순 눌렀을 때
+    function order2() {
+        $(".order1-con").hide();
+        $(".order2-con").show();
+    }
 
 </script>
 <!-- 웹 아이콘용 스크립트 -->
