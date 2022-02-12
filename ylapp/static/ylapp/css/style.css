@@ -437,3 +437,9 @@ article {
     width: 100px;
     height: 100px;
 }
+
+/* 사자 궁합 테스트용... */
+.matching-img {
+    max-width: 100px;
+    width: 80%;
+}
