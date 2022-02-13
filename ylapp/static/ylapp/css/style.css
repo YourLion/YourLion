@@ -261,6 +261,7 @@ article {
 .question-text {
     font-family: 'KOTRAHOPE';
     font-size: 16pt;
+    text-align: left;
 }
 
 .exlogo-con {
