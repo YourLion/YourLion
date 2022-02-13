@@ -92,6 +92,11 @@ article {
 .loading {
     display: none;
 }
+
+.show_char {
+    display: none;
+}
+
 .loading_css{
     display: flex;
     flex-direction: column;
@@ -261,7 +266,6 @@ article {
 .question-text {
     font-family: 'KOTRAHOPE';
     font-size: 16pt;
-    text-align: left;
 }
 
 .exlogo-con {
