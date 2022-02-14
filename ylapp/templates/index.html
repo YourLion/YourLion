@@ -13,7 +13,7 @@
 
 <!-- 메인 -->
 <div class="maintest">
-    <article class="index">
+    <article class="real-index">
         <div class="index-cont">
             <!-- 여기에 메인 이미지? -->
             <div class="ques-con">
@@ -24,142 +24,212 @@
                         <div class="ques-circle2"></div>
                     </div>
                     <hr class="ques-hr">
-                    <p class="info question-text">어느날 눈을 떠보니 내가 사자가 되어있었다..</p>
-                    <p class="info-main">나의 사자 테스트</p>
+                    <div class="index">
+                        <p class="info question-text">어느날 눈을 떠보니 내가 사자가 되어있었다..</p>
+                        <p class="info-main">나의 사자 테스트</p>
 
-                    <img class="lion-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="">
+                        <img class="lion-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="">
+
+                    </div>
+                    <!-- 모든 유형 사자 -->
+                    <div class="all_lions">
+                        <p class="" style="margin: 10px 0px 10px;color:#fab951;">🦁궁금한 사자를 눌러보세요🦁</p>
+                        <div class="" style="margin-bottom: 20px;">
+                            <button type="button" class="btn btn-outline-light" onclick="order1();">기본순</button>
+                            <button type="button" class="btn btn-outline-light" onclick="order2();">비율높은순</button>
+                            
+                        </div>
+                        <!-- 기본순 -->
+                        <div class="order1-con row">
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}"
+                                    onclick="char('ISTJ');" alt="ISTJ">
+                                <div class="order-img-name">철저한<br>공무원 사자</div>
+                                <div class="order-percent">25%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}"
+                                    onclick="char('ISFJ');" alt="ISFJ">
+                                <div class="order-img-name">게으른<br>완벽주의자 사자</div>
+                                <div class="order-percent">8%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}"
+                                    onclick="char('INFJ');" alt="INFJ">
+                                <div class="order-img-name">선한<br>낭만가득 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}"
+                                    onclick="char('INTJ');" alt="INTJ">
+                                <div class="order-img-name">가장 차가운<br>얼음 사자</div>
+                                <div class="order-percent">4%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}"
+                                    onclick="char('ISTP');" alt="ISTP">
+                                <div class="order-img-name">무념무상<br>만능주의자 사자</div>
+                                <div class="order-percent">9%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}"
+                                    onclick="char('ISFP');" alt="ISFP">
+                                <div class="order-img-name">경계하는<br>집순이 사자</div>
+                                <div class="order-percent">7%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}"
+                                    onclick="char('INFP');" alt="INFP">
+                                <div class="order-img-name">우유부단<br>예술가 사자</div>
+                                <div class="order-percent">3%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}"
+                                    onclick="char('INTP');" alt="INTP">
+                                <div class="order-img-name">논리적인<br>로봇 사자</div>
+                                <div class="order-percent">3%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}"
+                                    onclick="char('ESTP');" alt="ESTP">
+                                <div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div>
+                                <div class="order-percent">6%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}"
+                                    onclick="char('ESFP');" alt="ESFP">
+                                <div class="order-img-name">활동적인<br>분위기메이커 사자</div>
+                                <div class="order-percent">5%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}"
+                                    onclick="char('ENFP');" alt="ENFP">
+                                <div class="order-img-name">자유로운<br>무계획 사자</div>
+                                <div class="order-percent">4%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}"
+                                    onclick="char('ENTP');" alt="ENTP">
+                                <div class="order-img-name">독창적인<br>발명가 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}"
+                                    onclick="char('ESTJ');" alt="ESTJ">
+                                <div class="order-img-name">호불호가 확실한<br>선비 사자</div>
+                                <div class="order-percent">15%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}"
+                                    onclick="char('ESFJ');" alt="ESFJ">
+                                <div class="order-img-name">배려심 많은<br>다정한 사자</div>
+                                <div class="order-percent">5%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}"
+                                    onclick="char('ENFJ');" alt="ENFJ">
+                                <div class="order-img-name">정의로운<br>리더 사자</div>
+                                <div class="order-percent">1%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}"
+                                    onclick="char('ENTJ');" alt="ENTJ">
+                                <div class="order-img-name">현실적인<br>전략가 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                        </div>
+                        <!-- 비율높은순 -->
+                        <div class="order2-con row">
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}"
+                                    onclick="char('ISTJ');" alt="ISTJ">
+                                <div class="order-img-name">철저한<br>공무원 사자</div>
+                                <div class="order-percent">25%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}"
+                                    onclick="char('ESTJ');" alt="ESTJ">
+                                <div class="order-img-name">호불호가 확실한<br>선비 사자</div>
+                                <div class="order-percent">15%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}"
+                                    onclick="char('ISTP');" alt="ISTP">
+                                <div class="order-img-name">무념무상<br>만능주의자 사자</div>
+                                <div class="order-percent">9%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}"
+                                    onclick="char('ISFJ');" alt="ISFJ">
+                                <div class="order-img-name">게으른<br>완벽주의자 사자</div>
+                                <div class="order-percent">8%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}"
+                                    onclick="char('ISFP');" alt="ISFP">
+                                <div class="order-img-name">경계하는<br>집순이 사자</div>
+                                <div class="order-percent">7%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}"
+                                    onclick="char('ESTP');" alt="ESTP">
+                                <div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div>
+                                <div class="order-percent">6%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}"
+                                    onclick="char('ESFJ');" alt="ESFJ">
+                                <div class="order-img-name">배려심 많은<br>다정한 사자</div>
+                                <div class="order-percent">5%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}"
+                                    onclick="char('ESFP');" alt="ESFP">
+                                <div class="order-img-name">활동적인<br>분위기메이커 사자</div>
+                                <div class="order-percent">5%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}"
+                                    onclick="char('INTJ');" alt="INTJ">
+                                <div class="order-img-name">가장 차가운<br>얼음 사자</div>
+                                <div class="order-percent">4%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}"
+                                    onclick="char('ENFP');" alt="ENFP">
+                                <div class="order-img-name">자유로운<br>무계획 사자</div>
+                                <div class="order-percent">4%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}"
+                                    onclick="char('INFP');" alt="INFP">
+                                <div class="order-img-name">우유부단<br>예술가 사자</div>
+                                <div class="order-percent">3%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}"
+                                    onclick="char('INTP');" alt="INTP">
+                                <div class="order-img-name">논리적인<br>로봇 사자</div>
+                                <div class="order-percent">3%</div>
+                            </div>
+                            <br>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}"
+                                    onclick="char('ENTJ');" alt="ENTJ">
+                                <div class="order-img-name">현실적인<br>전략가 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}"
+                                    onclick="char('ENTP');" alt="ENTP">
+                                <div class="order-img-name">독창적인<br>발명가 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}"
+                                    onclick="char('INFJ');" alt="INFJ">
+                                <div class="order-img-name">선한<br>낭만가득 사자</div>
+                                <div class="order-percent">2%</div>
+                            </div>
+                            <div class="order-img-con col-3"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}"
+                                    onclick="char('ENFJ');" alt="ENFJ">
+                                <div class="order-img-name">정의로운<br>리더 사자</div>
+                                <div class="order-percent">1%</div>
+                            </div>
+                        </div>
+                    </div>
                     <br>
-                    <button type="button" class="start-btn" style="margin: 0px 0px 10px;" onclick="situation();">테스트
-                        시작</button><br>
-                    <button type="button" class="start-btn" onclick="all_lions();">모든 사자 유형 보기</button><br>
-                    <img class="" style="max-width:100px; width: 80%; margin: 0px 0px 50px;"
-                        src="{% static 'ylapp/img/멋사.png' %}" alt="">
+                    <div class="index">
+                        <button type="button" class="btn btn-outline-light" 
+                        style="margin: 0px 0px 10px; border-radius: 5px; width: 250px; height: 50px;
+                        font-family: 'Cafe24Ssurround'; font-size: 16pt;" onclick="situation();">테스트 시작</button><br>
+                        <button type="button" class="start-btn" onclick="all_lions();">모든 사자 유형 보기</button><br>
+                        <img class="" style="max-width:100px; width: 80%; margin: 0px 0px 50px;"
+                            src="{% static 'ylapp/img/멋사.png' %}" alt="">
+                    </div>
 
                 </div>
             </div>
+        </div>
     </article>
 
-    <!-- 모든 유형 사자 -->
-    <article class="all_lions">
-        <div class="">
-            <button type="button" class="" onclick="order1();">기본순</button>
-            <button type="button" class="" onclick="order2();">비율높은순</button>
-        </div>
-        <!-- 기본순 -->
-        <div class="order1-con">
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}" alt="ISTJ">
-                <div class="order-img-name">철저한<br>공무원 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}" alt="ISFJ">
-                <div class="order-img-name">게으른<br>완벽주의자 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}" alt="INFJ">
-                <div class="order-img-name">선한<br>낭만가득 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}" alt="INTJ">
-                <div class="order-img-name">가장 차가운<br>얼음 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}" alt="ISTP">
-                <div class="order-img-name">무념무상<br>만능주의자 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}" alt="ISFP">
-                <div class="order-img-name">경계하는<br>집순이 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}" alt="INFP">
-                <div class="order-img-name">우유부단<br>예술가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}" alt="INTP">
-                <div class="order-img-name">논리적인<br>로봇 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}" alt="ESTP">
-                <div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}" alt="ESFP">
-                <div class="order-img-name">활동적인<br>분위기메이커 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="ENFP">
-                <div class="order-img-name">자유로운<br>무계획 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}" alt="ENTP">
-                <div class="order-img-name">독창적인<br>발명가 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}" alt="ESTJ">
-                <div class="order-img-name">호불호가 확실한<br>선비 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}" alt="ESFJ">
-                <div class="order-img-name">배려심 많은<br>다정한 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}" alt="ENFJ">
-                <div class="order-img-name">정의로운<br>리더 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}" alt="ENTJ">
-                <div class="order-img-name">현실적인<br>전략가 사자</div>
-            </div>
-            <button type="button" style="margin: 0px 0px 10px;" class="start-btn" onclick="again();">홈으로</button>
-        </div>
-        <!-- 비율높은순 -->
-        <div class="order2-con">
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTJ.png' %}" alt="ISTJ">
-                <div class="order-img-name">철저한<br>공무원 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTJ.png' %}" alt="ESTJ">
-                <div class="order-img-name">호불호가 확실한<br>선비 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISTP.png' %}" alt="ISTP">
-                <div class="order-img-name">무념무상<br>만능주의자 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFJ.png' %}" alt="ISFJ">
-                <div class="order-img-name">게으른<br>완벽주의자 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ISFP.png' %}" alt="ISFP">
-                <div class="order-img-name">경계하는<br>집순이 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESTP.png' %}" alt="ESTP">
-                <div class="order-img-name">스릴을 좋아하는<br>모험가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFJ.png' %}" alt="ESFJ">
-                <div class="order-img-name">배려심 많은<br>다정한 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ESFP.png' %}" alt="ESFP">
-                <div class="order-img-name">활동적인<br>분위기메이커 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTJ.png' %}" alt="INTJ">
-                <div class="order-img-name">가장 차가운<br>얼음 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFP.png' %}" alt="ENFP">
-                <div class="order-img-name">자유로운<br>무계획 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFP.png' %}" alt="INFP">
-                <div class="order-img-name">우유부단<br>예술가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INTP.png' %}" alt="INTP">
-                <div class="order-img-name">논리적인<br>로봇 사자</div>
-            </div>
-            <br>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTJ.png' %}" alt="ENTJ">
-                <div class="order-img-name">현실적인<br>전략가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENTP.png' %}" alt="ENTP">
-                <div class="order-img-name">독창적인<br>발명가 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/INFJ.png' %}" alt="INFJ">
-                <div class="order-img-name">선한<br>낭만가득 사자</div>
-            </div>
-            <div class="order-img-con"><img class="order-img" src="{% static 'ylapp/img/ENFJ.png' %}" alt="ENFJ">
-                <div class="order-img-name">정의로운<br>리더 사자</div>
-            </div>
-        </div>
-    </article>
 
     <!-- 테스트 설명 -->
     <article class="start">
-
-
         <div class="ques-con">
             <div class="ques-squ">
                 <div class="ques-cir-con">
@@ -175,7 +245,10 @@
                         모두가 잠든 새벽..<br>동물원에는 사자들만 깨어있다.<br>사자들은 인간 몰래 동물원을 탈출해<br>초원으로 향하기로 마음을 먹는데..</p>
                 </div>
 
-                <button type="button" class="start-btn" onclick="start();">탈출 시작</button>
+                <button type="button" class="btn btn-outline-light" 
+                style="margin: 0px 0px 10px; border-radius: 5px; width: 250px; height: 50px;
+                font-family: 'Cafe24Ssurround'; font-size: 16pt; margin: 0px 0px 50px;"
+                onclick="start();">탈출 시작</button>
             </div>
         </div>
     </article>
@@ -195,12 +268,14 @@
                     <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
                 </div>
                 <div class="ques-box">
-                    <p id="question-title" class="question-text">질문</p>
+                    <p id="question-title" class="question-text" style="color: rgb(95, 95, 95);">질문</p>
 
                 </div>
+                <div class="trans">
                 <input id="type" type="hidden" value="type">
                 <button id="A" type="button" class="">선택A</button><br>
                 <button id="B" type="button" class="">선택B</button>
+                </div>
 
             </div>
         </div>
@@ -252,30 +327,26 @@
                     <p id="result-percentage" class="percent question-text">한국 mbti 비율</p>
                     <div class="result_ptags">
                         <p style="color: #FFC86F;" class="question-text"> ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ </p>
-                        <p style="color: black;">🦁당신의 겉모습</p>
-                        <p id="result-explain" class="lion-result question-text">설명</p>
-                        <br>
-                        <p>🦁당신의 속마음</p>
-                        <p id="result-explain" class="lion-result question-text">설명</p>
+                        <p style="color: black;">🦁당신의 사자 모습🦁</p>
+                        <p id="result-explain" class="lion-result question-text result-explain">설명</p>
                         <p style="color: #FFC86F;" class="question-text"> ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ </p>
 
                         <br>
 
                         <p>🥩<br>나와 잘맞는<br>사자친구들은 누구?</p>
-                        <div>
-                            <div style="float: left; margin-left: 30px;">
+                        <div class="row">
+                            <div class="col-6">
                                 <p class="">🧡최고의 궁합</p>
-                                <p id="result-best" class="lion-result question-text">베스트</p>
+                                <img id="result-best-img" class="matching-img" src="" alt="best lion">
+                                <p id="result-best" class="lion-result question-text" style="font-size: 15;">베스트</p>
                             </div>
-
-                            <div style="float: right; margin-right: 30px;">
+                            <div class="col-6">
                                 <p class="">💢최악의 궁합</p>
-                                <p id="result-worst" class="lion-result question-text">워스트</p>
+                                <img id="result-worst-img" class="matching-img" src="" alt="worst lion">
+                                <p id="result-worst" class="lion-result question-text" style="font-size: 15;">워스트</p>
                             </div>
                         </div>
-
-                        <br><br><br><br><br>
-
+                        <br>
                         <p>나의 결과 공유하기</p>
                         <div class="link-margin">
                             <img class="link-img" src="{% static 'ylapp/img/clipboard-share.png' %}" alt="share">
@@ -288,13 +359,56 @@
                                 href="https://www.likelion.net/univ">멋쟁이사자처럼 바로가기</a>
                         </div>
                     </div>
-                    <button type="button" style="margin: 0px 0px 10px;" class="start-btn" onclick="again();">다시
-                        하기</button>
+                    <button type="button" class="btn btn-outline-light" 
+                    style="margin: 0px 0px 10px; border-radius: 5px; width: 250px; height: 50px;
+                    font-family: 'Cafe24Ssurround'; font-size: 16pt;"
+                    onclick="again();">다시하기</button>
                     <button type="button" class="start-btn" onclick="all_lions();">모든 사자 유형 보기</button>
                 </div>
             </div>
         </div>
     </article>
+
+    <!-- 유형별 특징 보기 -->
+    <article class="show_char">
+        <div class="ques-con">
+            <div class="ques-squ">
+                <div class="ques-cir-con">
+                    <div class="ques-circle1"></div>
+                    <div class="ques-circle2"></div>
+                    <div class="ques-circle2"></div>
+                </div>
+                <hr class="ques-hr">
+                <div class="ques-contbox">
+                    <h2 id="result-lion2" class="">너 사자 이름</h2>
+                    <img id="result-img2" class="lion-img" src="" alt="your lion">
+                    <p id="result-percentage2" class="percent question-text">한국 mbti 비율</p>
+                    <div class="result_ptags">
+                        <p style="color: #FFC86F;" class="question-text"> ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ </p>
+                        <p style="color: black;">🦁당신의 사자 모습🦁</p>
+                        <p id="result-explain2" class="lion-result question-text result-explain">설명</p>
+                        <p style="color: #FFC86F;" class="question-text"> ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ </p>
+                        <p>🥩<br>나와 잘맞는<br>사자친구들은 누구?</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="">🧡최고의 궁합</p>
+                                <img id="result-best-img2" class="matching-img" src="" alt="best lion">
+                                <p id="result-best2" class="lion-result question-text" style="font-size: 15;">베스트</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="">💢최악의 궁합</p>
+                                <img id="result-worst-img2" class="matching-img" src="" alt="worst lion">
+                                <p id="result-worst2" class="lion-result question-text" style="font-size: 15;">워스트</p>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" style="margin: 0px 0px 10px;" class="start-btn" onclick="back();">돌아가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</article>
 </div>
 
 <!-- 문항 선택 정보 저장 -->
@@ -347,34 +461,34 @@
         1: { "title": "한자리에 모인 사자들은 탈출에 대해서 고민 중이다. <br> 이 때 당신의 행동은?", "type": "EI", "A": "주변 사자들과 대화하며 정보를 주고받는다", "B": "고민에 빠져 생각이 많아지며 말이 없어진다" },
         2: { "title": "조심히 새벽에 동물원을 빠져나와 초원을 향해 달려가기 시작하는데..", "type": "JP", "A": "어젯밤 지도를 익혀두어 계획한 대로 달려간다", "B": "지도를 대충 보긴 했지만 일단 달리며 주변 상황을 관찰하고 판단한다" },
         3: { "title": "초원을 향해 달려가는 중 친한 사자가 넘어졌다.", "type": "TF", "A": "&quot;일단 응급처치를 해야겠어.&quot;", "B": "&quot;괜찮아? 아프겠다..ㅠㅠ 걸을 수 있겠어?ㅠㅠ&quot;" },
-        4: { "title": "달리는 중 슬슬 배가 고프다.<br>사자들은 항상 먹던 풀이 있지만, 주위엔 처음 보는 풀들뿐..", "type": "SN", "A": "먹던 풀이 안전한데.. 좀 더 가면 먹던 풀이 있지 않을까?", "B": "죽지는 않겠지. 일단 먹어보자. 혹시 몰라 이게 더 맛있을지?" },
+        4: { "title": "달리는 중 슬슬 배가 고프다.<br>사자들은 항상 먹던 고기가 있지만, 주위엔 처음 보는 고기뿐..", "type": "SN", "A": "먹던 고기가 안전한데.. 좀 더 가면 먹던 고기가 있지 않을까?", "B": "죽지는 않겠지. 일단 먹어보자. 혹시 몰라 이게 더 맛있을지?" },
         5: { "title": "초원에 가기 위해 평소에 체력을 키웠더니 내가 제일 잘 달린다. <br>이때 옆 사자가 칭찬해주는데..!", "type": "TF", "A": "평소에 열심히 운동하는 것 같지 않아 보였는데 제일 잘 달리네!", "B": "항상 꾸준히 운동하더니 역시 너는 대단해!" },
-        6: { "title": "초원으로 가다가 길을 잃었다.", "type": "SN", "A": "&quot;우선 내가 달려왔던 길로 되돌아가 볼까..?&quot; 하며 우선 침착한다.", "B": "&quot;이러다 초원이 아니라 아예 다른 곳에 도착하면 어쩌지?&quot; 하며 갖가지 생각이 든다." },
-        7: { "title": "조금만 더 가면 초원이라는 소문이 돌고 있다. 초원에 대해 생각해보기 시작하는데..", "type": "SN", "A": "푸른 풀이 가득한 곳! 기대된다!", "B": "만약 초원에 갔는데 나보다 더 강한 사자가 있으면 어떡하지?" },
-        8: { "title": "드디어 초원에 도착한 나, 그곳에서 나와 다른 동물원에서 온 사자를 만났다.", "type": "TF", "A": "여기까지 오느라 수고했어", "B": "우와 너도 동물원에서 왔구나! 여기까지 오는데 너무 힘들었지?" },
-        9: { "title": "초원에서의 첫 번째 저녁이 왔다.<br>무엇을 할 것인가?", "type": "EI", "A": "사자들을 불러모아 파티를 열자! 모닥불도 피우고 고기도 준비해야지!", "B": "달리느라 너무 지쳤어. 일단 혼자 쉬면서 생각을 정리하는 시간이 필요해" },
+        6: { "title": "초원으로 가다가 길을 잃었다.", "type": "SN", "A": "&quot;우선 내가 달려왔던 길로 되돌아가 볼까..?&quot; 하며 일단 침착한다.", "B": "&quot;이러다 초원이 아니라 아예 다른 곳에 도착하면 어쩌지?&quot; 하며 갖가지 생각이 든다." },
+        7: { "title": "조금만 더 가면 초원이라는 소문이 돌고 있다.<br>초원에 대해 생각해보기 시작하는데..", "type": "SN", "A": "푸른 풀이 가득한 곳! 기대된다!", "B": "만약 초원에 갔는데 나보다 더 강한 사자가 있으면 어떡하지?" },
+        8: { "title": "드디어 초원에 도착한 나, 그 곳에서 나와 다른 동물원에서 온 사자를 만났다.", "type": "TF", "A": "여기까지 오느라 수고했어", "B": "우와 너도 동물원에서 왔구나! 여기까지 오는데 너무 힘들었지?" },
+        9: { "title": "초원에서의 첫 번째 저녁이 왔다.<br>무엇을 할 것인가?", "type": "EI", "A": "사자들을 불러모아 파티를 열자!<br>모닥불도 피우고 고기도 준비해야지!", "B": "달리느라 너무 지쳤어. 일단 혼자 쉬면서 생각을 정리하는 시간이 필요해" },
         10: { "title": "잠들기 전, 내일 무엇을 할지 생각해본다.", "type": "JP", "A": "해보고 싶었던 것들을 미리 정리해왔지! 가장 먼저 할 것은 이거야!", "B": "돌아다니면서 하고 싶은 걸 찾아보자! 도착하니까 마음이 편하다!" },
         11: { "title": "초원 생활을 하며 마음이 편해지니 슬슬 취미를 가지고 싶어진다!", "type": "EI", "A": "여러 사자와 어울릴 수 있는 모임이 좋겠어!", "B": "혼자서 편하게 할 수 있는 활동이 좋겠어!" },
         12: { "title": "마음에 들었던 장소로 피크닉을 가기로 했는데, 도착하니 이미 그곳에는 다른 동물들로 꽉 차있다.", "type": "JP", "A": "다른 동물들이 갈 때까지 조금만 더 기다려보자. 아니면 내가 근처에 찾아둔 다른 장소도 있어!", "B": "그냥 우리 다른 곳으로 가서 놀자!" }
     }
 
-     // mbti 결과 정보 저장
-     var mbti_information = {
-        "ISTJ": { 'lion': '철저한 공무원 사자', 'explain': '• 아주 성실하고 계획적인 사자랍니다~<br>• 체계적으로 자기 일과 삶을 구성해 나갈 때 기뻐요!<br>• 전통과 성실을 가치 있다고 생각해요.<br>• 일할 때는 해야 할 것을 논리적으로 결정하고, 흐트러짐 없이 꾸준히 하는 장점이 있어요.<br>• 책임감이 강해서 신뢰가 간다고 주변 사자들이 말하더라구요.<br>• 하지만 융통성이 없다는 소리도 자주 들어요.', 'img': 'static/ylapp/img/ISTJ.png'},
+    // mbti 결과 정보 저장
+    var mbti_information = {
+        "ISTJ": { 'lion': '철저한 공무원 사자', 'explain': '• 아주 성실하고 계획적인 사자랍니다~<br>• 체계적으로 자기 일과 삶을 구성해 나갈 때 기뻐요!<br>• 전통과 성실을 가치 있다고 생각해요.<br>• 일할 때는 해야 할 것을 논리적으로 결정하고, 흐트러짐 없이 꾸준히 하는 장점이 있어요.<br>• 책임감이 강해서 신뢰가 간다고 주변 사자들이 말하더라구요.<br>• 하지만 융통성이 없다는 소리도 자주 들어요.', 'img': 'static/ylapp/img/ISTJ.png' },
         "ISFJ": { 'lion': '게으른 완벽주의자', 'explain': '• 계획 세우는 것을 좋아하지만 잘 지키진 않아요.<br>• 계획이 틀어지면 다른 계획부터 세워요.<br>• 사자들의 말에 귀를 기울이고, 감정을 캐치해 공감하지만, 그만큼 공감받는 것도 좋아해요.<br>• 나서야 하는 일이 있다면 여러 번 고민해요. 하지만 관심 받는 건 좋아요!<br>• 쓸데없는 감정 소모가 싫어요. 사자관계에 진지한 편이에요!<br>• 내가 해준 만큼 돌려받고 싶어요. 돌려받지 못하면 내심 서운해요.<br>• 싫은 소리 잘하지 못하고 ‘나’의 선을 넘은 사자와는 끝이에요!', 'img': 'static/ylapp/img/ISFJ.png' },
-        "INFJ": { 'lion': '선한 낭만가득 사자', 'explain': '• 주변 사자들의 생각과 감정을 잘 읽고, 공감하는 능력까지 탁월한 사자랍니다~<br>• 내 확고한 가치를 양심적으로 수행하려고 해요.<br>• 공동의 선을 추구하며 공동의 이익을 중요하게 생각해요.<br>• 저만의 멋진 아이디어를 실현 하기 원해요.<br>• 가끔 잠시 생각을 비우고 혼자만의 시간을 갖는 것이 필요해요.<br>• 제가 현실 감각이 부족하다고 어떤 사자가 말해주더라구요.', 'img': 'static/ylapp/img/INFJ.png'},
-        "INTJ": { 'lion': '가장 차가운 얼음 사자', 'explain': '• 겉은 얼음처럼 차가워 보이지만 속은 여린 사자랍니다~<br>• 관심 있는 분야에 대한 지식을 다른 사자와 공유하는 것을 좋아해요.<br>• 회의적이며 동물원에서 가장 독립적인 사자였어요.<br>• 직관적이고 통찰력이 좋다는 장점이 있어요.<br>• 상상력이 풍부하며, 전략 또한 잘 세워요.<br>• 주변 사자들로부터 공감 능력이 부족하다는 소리를 자주 들어요.', 'img': 'static/ylapp/img/INTJ.png'},
-        "ISTP": { 'lion': '무념무상 만능주의자 사자', 'explain': '• 주변 사자들에게 관심이 별로 없어요. 하지만 ‘내 사자다’라는 생각이 드는 사자에게는 퍼줘요.<br>• 손재주가 뛰어나고 관심 있는 분야에는 자칭 타칭 ‘프로’가 돼요.<br>• 꽂히는 건 무조건 해야 해요! 그렇지만 관심 없는 것들에는 쳐다보지도 않아요.<br>• 공감 능력이 떨어져요. 공감되지 않는 일에 빈말로라도 억지로 공감할 수 없어요.<br>• 나에게 징징거리는 사자들은 대하기 어려워요. 벽을 치게 돼요.', 'img': 'static/ylapp/img/ISTP.png'},
-        "ISFP": { 'lion': '경계하는 집순이 사자', 'explain': '• 사자들과 만나는 거 좋은데 힘들어요. 집에 돌아오면 바로 이불로 직행해요.<br>• 내 속마음을 다른 사자들에게 밝히는 게 어려워요. 하물며 나와 친한 사자여도요!<br>• 주변 사자들에게 착하다는 말을 들어요. 정작 본인은 자신이 그렇게 착하다고 생각하지 않아요.<br>• 친한 사자와 안 친한 사자를 대할 때가 달라요! 친해지면 광대 포지션 & 팩트 폭격기를 담당해요.<br>• 좋아하는 사자에게 마음을 여는 것에 시간이 걸려요.<br>• 상처받기 싫어서 관계에 있어 신중하고 조심해요.', 'img': 'static/ylapp/img/ISFP.png'},
-        "INFP": { 'lion': '우유부단 예술가 사자', 'explain': '• 혼자 있는 건 좋은데 외로운 건 싫어요.<br>• 소수의 친한 사자들과 깊고 좁은 관계를 유지해요.<br>• 시작할 때는 무엇이든 완벽해지고 싶으나 끝은 내 마음과 다르게 완벽해지는 일이 적어요.<br>• 생각을 실행으로 옮기는 게 너무 어려워요.<br>• 개인적인 부분을 다른 사자가 간섭하는 것을 싫어해요. 나도 다른 사자들의 개인적인 부분을 존중하려 해요.<br>• 이것저것 잡생각이 많고 머릿속에 떠오르는 아이디어도 많아요.', 'img': 'static/ylapp/img/INFP.png'},
-        "INTP": { 'lion': '논리적인 로봇 사자', 'explain': '• 논리적이고 분석적인 사자랍니다~<br>• 창의적이고 독창적인 아이디어를 제시하는 것을 좋아해요.<br>• 사자들과의 잡담은 싫지만, 관심 분야에 대한 생각을 나누는 대화는 즐거워요.<br>• 사실 전달을 중요하게 생각해서 솔직하며 겉과 속이 일치해요.<br>• 주변 사자들에게 관심이 없는 편이라 ‘아싸’라는 별명을 갖고 있어요.<br>• 기분이나 감정을 생각을 통해 하기에 공감 표현이 약해요.', 'img': 'static/ylapp/img/INTP.png'},
-        "ESTP": { 'lion': '스릴을 좋아하는 모험가 사자', 'explain': '• 직설적이고 친근한 농담으로 주변 사자들을 웃게 만드는 사자랍니다~<br>• 많은 사자가 모인 행사에서 여기저기 자리를 옮겨 다니는 무리에서 볼 수 있어요.<br>• 무대 같은 곳에 올라가는 것도 굉장히 좋아해요.<br>• 행동이 먼저 앞서기도 하기에 가끔 실수를 범하기도 해요.<br>• 단순히 앉아 있는 것보다 직접 몸으로 부딪쳐 문제를 해결하는 것을 좋아해요.', 'img': 'static/ylapp/img/ESTP.png'},
-        "ESFP": { 'lion': '활동적인 분위기메이커 사자', 'explain': '• 천성적으로 타고난 리더 사자랍니다~<br>• 넘치는 카리스마와 자신감으로 공통의 목표 실현을 위해 다른 사자들을 이끌어요.<br>• 전략적인 사고와 장기적인 안목이 있어요.<br>• 빠른 판단력과 정확성으로 계획을 단계별로 실행하며 진정한 리더의 역할을 해요.<br>• 보통의 사자라면 포기할 법도 한 일을 대단한 의지력으로 꾸준히 밀어붙입니다.<br>• 뛰어난 사회성을 발휘하여 다른 동료들과 함께 더 큰 성공과 성취를 이루고 싶어 해요.', 'img': 'static/ylapp/img/ESFP.png'},
-        "ENFP": { 'lion': '자유로운 무계획 사자', 'explain': '• 타인의 감정을 잘 읽고 흥미를 유발하는 언어 표현을 사용하기 때문에 어디서든 인기가 많아요.<br>• 언제나 삶의 의미를 생각해요.<br>• 즐거움과 사랑, 가슴을 뛰게 하는 무언가를 찾아다니는 ‘행복 탐험가’예요.<br>• 대체로 민첩하고 영리하며 직관력이 있어 자신의 믿음과 신념이 강해 불가능은 없다고 생각해요.<br>• 매우 다양한 아이디어를 생각하는 가능성으로 뭉친 사자예요.', 'img': 'static/ylapp/img/ENFP.png'},
+        "INFJ": { 'lion': '선한 낭만가득 사자', 'explain': '• 주변 사자들의 생각과 감정을 잘 읽고, 공감하는 능력까지 탁월한 사자랍니다~<br>• 내 확고한 가치를 양심적으로 수행하려고 해요.<br>• 공동의 선을 추구하며 공동의 이익을 중요하게 생각해요.<br>• 저만의 멋진 아이디어를 실현 하기 원해요.<br>• 가끔 잠시 생각을 비우고 혼자만의 시간을 갖는 것이 필요해요.<br>• 제가 현실 감각이 부족하다고 어떤 사자가 말해주더라구요.', 'img': 'static/ylapp/img/INFJ.png' },
+        "INTJ": { 'lion': '가장 차가운 얼음 사자', 'explain': '• 겉은 얼음처럼 차가워 보이지만 속은 여린 사자랍니다~<br>• 관심 있는 분야에 대한 지식을 다른 사자와 공유하는 것을 좋아해요.<br>• 회의적이며 동물원에서 가장 독립적인 사자였어요.<br>• 직관적이고 통찰력이 좋다는 장점이 있어요.<br>• 상상력이 풍부하며, 전략 또한 잘 세워요.<br>• 주변 사자들로부터 공감 능력이 부족하다는 소리를 자주 들어요.', 'img': 'static/ylapp/img/INTJ.png' },
+        "ISTP": { 'lion': '무념무상 만능주의자 사자', 'explain': '• 주변 사자들에게 관심이 별로 없어요. 하지만 ‘내 사자다’라는 생각이 드는 사자에게는 퍼줘요.<br>• 손재주가 뛰어나고 관심 있는 분야에는 자칭 타칭 ‘프로’가 돼요.<br>• 꽂히는 건 무조건 해야 해요! 그렇지만 관심 없는 것들에는 쳐다보지도 않아요.<br>• 공감 능력이 떨어져요. 공감되지 않는 일에 빈말로라도 억지로 공감할 수 없어요.<br>• 나에게 징징거리는 사자들은 대하기 어려워요. 벽을 치게 돼요.', 'img': 'static/ylapp/img/ISTP.png' },
+        "ISFP": { 'lion': '경계하는 집순이 사자', 'explain': '• 사자들과 만나는 거 좋은데 힘들어요. 집에 돌아오면 바로 이불로 직행해요.<br>• 내 속마음을 다른 사자들에게 밝히는 게 어려워요. 하물며 나와 친한 사자여도요!<br>• 주변 사자들에게 착하다는 말을 들어요. 정작 본인은 자신이 그렇게 착하다고 생각하지 않아요.<br>• 친한 사자와 안 친한 사자를 대할 때가 달라요! 친해지면 광대 포지션 & 팩트 폭격기를 담당해요.<br>• 좋아하는 사자에게 마음을 여는 것에 시간이 걸려요.<br>• 상처받기 싫어서 관계에 있어 신중하고 조심해요.', 'img': 'static/ylapp/img/ISFP.png' },
+        "INFP": { 'lion': '우유부단 예술가 사자', 'explain': '• 혼자 있는 건 좋은데 외로운 건 싫어요.<br>• 소수의 친한 사자들과 깊고 좁은 관계를 유지해요.<br>• 시작할 때는 무엇이든 완벽해지고 싶으나 끝은 내 마음과 다르게 완벽해지는 일이 적어요.<br>• 생각을 실행으로 옮기는 게 너무 어려워요.<br>• 개인적인 부분을 다른 사자가 간섭하는 것을 싫어해요. 나도 다른 사자들의 개인적인 부분을 존중하려 해요.<br>• 이것저것 잡생각이 많고 머릿속에 떠오르는 아이디어도 많아요.', 'img': 'static/ylapp/img/INFP.png' },
+        "INTP": { 'lion': '논리적인 로봇 사자', 'explain': '• 논리적이고 분석적인 사자랍니다~<br>• 창의적이고 독창적인 아이디어를 제시하는 것을 좋아해요.<br>• 사자들과의 잡담은 싫지만, 관심 분야에 대한 생각을 나누는 대화는 즐거워요.<br>• 사실 전달을 중요하게 생각해서 솔직하며 겉과 속이 일치해요.<br>• 주변 사자들에게 관심이 없는 편이라 ‘아싸’라는 별명을 갖고 있어요.<br>• 기분이나 감정을 생각을 통해 하기에 공감 표현이 약해요.', 'img': 'static/ylapp/img/INTP.png' },
+        "ESTP": { 'lion': '스릴을 좋아하는 모험가 사자', 'explain': '• 직설적이고 친근한 농담으로 주변 사자들을 웃게 만드는 사자랍니다~<br>• 많은 사자가 모인 행사에서 여기저기 자리를 옮겨 다니는 무리에서 볼 수 있어요.<br>• 무대 같은 곳에 올라가는 것도 굉장히 좋아해요.<br>• 행동이 먼저 앞서기도 하기에 가끔 실수를 범하기도 해요.<br>• 단순히 앉아 있는 것보다 직접 몸으로 부딪쳐 문제를 해결하는 것을 좋아해요.', 'img': 'static/ylapp/img/ESTP.png' },
+        "ESFP": { 'lion': '활동적인 분위기메이커 사자', 'explain': '• 천성적으로 타고난 리더 사자랍니다~<br>• 넘치는 카리스마와 자신감으로 공통의 목표 실현을 위해 다른 사자들을 이끌어요.<br>• 전략적인 사고와 장기적인 안목이 있어요.<br>• 빠른 판단력과 정확성으로 계획을 단계별로 실행하며 진정한 리더의 역할을 해요.<br>• 보통의 사자라면 포기할 법도 한 일을 대단한 의지력으로 꾸준히 밀어붙입니다.<br>• 뛰어난 사회성을 발휘하여 다른 동료들과 함께 더 큰 성공과 성취를 이루고 싶어 해요.', 'img': 'static/ylapp/img/ESFP.png' },
+        "ENFP": { 'lion': '자유로운 무계획 사자', 'explain': '• 타인의 감정을 잘 읽고 흥미를 유발하는 언어 표현을 사용하기 때문에 어디서든 인기가 많아요.<br>• 언제나 삶의 의미를 생각해요.<br>• 즐거움과 사랑, 가슴을 뛰게 하는 무언가를 찾아다니는 ‘행복 탐험가’예요.<br>• 대체로 민첩하고 영리하며 직관력이 있어 자신의 믿음과 신념이 강해 불가능은 없다고 생각해요.<br>• 매우 다양한 아이디어를 생각하는 가능성으로 뭉친 사자예요.', 'img': 'static/ylapp/img/ENFP.png' },
         "ENTP": { 'lion': '독창적인 발명가 사자', 'explain': '• 세상에서 자신의 개그를 좋아하고, 주변 사자들에게 ‘웃기다’라는 말을 들을 때 행복해요.<br>• 자신이 구상하는 것을 실현하고자 하는 기질이 강해요.<br>• 특유의 아웃사이더인 성격까지 있어 혁명가의 기질을 띠고 있는 사자예요.<br>• 모든 분야에 있어서, 기존의 체제 자체를 뒤집거나 분야 전체의 도약을 이루어내요.<br>• 하지만 자신이 흥미가 없는 일이나 반복되는 업무에는 손을 대지 않는 경향이 있어요.', 'img': 'static/ylapp/img/ENTP.png' },
         "ESTJ": { 'lion': '호불호가 확실한 선비 사자', 'explain': '• 책임감이 강한 사자랍니다~<br>• 제대로 된 계획을 세우고 차근차근 논리적으로 일을 추진해요.<br>• 현실적이고 구체적이며 생산적인 일을 추구해요.<br>• 개인적인 감정에 휘둘리지 않고 객관적인 정보나 논리에 의존하여 공정하게 결정을 내려요.<br>• 판단할 때도 사실과 논리를 고려하여 합리적인 선택을 내려요.<br>• 정확한 규칙을 중요하게 생각하며 그에 따라 행동해요.', 'img': 'static/ylapp/img/ESTJ.png' },
-        "ESFJ": { 'lion': '배려심이 많은 다정한 사자', 'explain': '• 리액션이 좋은 인기쟁이 사자랍니다~<br>• 사교적인 성향이 강하며 남을 돕는데 열과 성을 다해요.<br>• 주위 동료들에게 끊임없는 관심과 애정을 보이며 본인이 아끼는 동료들을 살뜰히 챙겨요.<br>• 조화와 균형을 중요시하고 이벤트를 잘 기획하는 매사에 열정적인 사자예요.<br>• 생각보다 철저하고 계획이 틀어지는 것을 싫어하며 참을성이 좋아요.<br>• 꼼꼼하게 계획을 세운 후 디테일하게 적용하며 일정한 목적과 목표가 있어요.', 'img': 'static/ylapp/img/ESFJ.png'},
-        "ENFJ": { 'lion': '정의로운 리더 사자', 'explain': '• 따뜻하고 사교성이 풍부한 사자랍니다~<br>• 적극적이고 책임감이 강하여 어느 집단에서든 늘 리더의 역할을 맡는 것을 좋아해요.<br>• 참을성이 많으며 이타적이고 민첩해요.<br>• 다른 사자들의 의견이나 생각에 관심을 가지며 다른 사자의 의견을 대체로 동의하는 편이에요.<br>• 사자들과 있는 시간도 즐겁지만, 가끔 자신만의 생각을 정리하고 힐링하는 시간을 좋아해요.<br>• 때로 사자들의 좋은 점을 지나치게 이상화하며, 다른 사자들이 자기와 같다고 생각하는 경향이 있어요.', 'img': 'static/ylapp/img/ENFJ.png'},
+        "ESFJ": { 'lion': '배려심이 많은 다정한 사자', 'explain': '• 리액션이 좋은 인기쟁이 사자랍니다~<br>• 사교적인 성향이 강하며 남을 돕는데 열과 성을 다해요.<br>• 주위 동료들에게 끊임없는 관심과 애정을 보이며 본인이 아끼는 동료들을 살뜰히 챙겨요.<br>• 조화와 균형을 중요시하고 이벤트를 잘 기획하는 매사에 열정적인 사자예요.<br>• 생각보다 철저하고 계획이 틀어지는 것을 싫어하며 참을성이 좋아요.<br>• 꼼꼼하게 계획을 세운 후 디테일하게 적용하며 일정한 목적과 목표가 있어요.', 'img': 'static/ylapp/img/ESFJ.png' },
+        "ENFJ": { 'lion': '정의로운 리더 사자', 'explain': '• 따뜻하고 사교성이 풍부한 사자랍니다~<br>• 적극적이고 책임감이 강하여 어느 집단에서든 늘 리더의 역할을 맡는 것을 좋아해요.<br>• 참을성이 많으며 이타적이고 민첩해요.<br>• 다른 사자들의 의견이나 생각에 관심을 가지며 다른 사자의 의견을 대체로 동의하는 편이에요.<br>• 사자들과 있는 시간도 즐겁지만, 가끔 자신만의 생각을 정리하고 힐링하는 시간을 좋아해요.<br>• 때로 사자들의 좋은 점을 지나치게 이상화하며, 다른 사자들이 자기와 같다고 생각하는 경향이 있어요.', 'img': 'static/ylapp/img/ENFJ.png' },
         "ENTJ": { 'lion': '현실적인 전략가 사자', 'explain': '• 천성적으로 타고난 리더 사자랍니다~<br>• 넘치는 카리스마와 자신감으로 공통의 목표 실현을 위해 다른 사자들을 이끌어요.<br>• 전략적인 사고와 장기적인 안목이 있어요.<br>• 빠른 판단력과 정확성으로 계획을 단계별로 실행하며 진정한 리더의 역할을 해요.<br>• 보통의 사자라면 포기할 법도 한 일을 대단한 의지력으로 꾸준히 밀어붙입니다.<br>• 뛰어난 사회성을 발휘하여 다른 동료들과 함께 더 큰 성공과 성취를 이루고 싶어 해요.', 'img': 'static/ylapp/img/ENTJ.png' }
     }
 
@@ -400,26 +514,27 @@
 
     //mbti 궁합 정보 저장
     var mbti_matching = {
-        "ISTJ": { 'best':'스릴을 좋아하는 모험가 사자', 'worst':'정의로운 리더 사자', 'best-img':'static/ylapp/img/ESTP.png', 'worst-img':'static/ylapp/img/ENFJ.png' },
-        "ISFJ": { 'best':'활동적인 분위기메이커 사자', 'worst':'현실적인 전략가 사자', 'best-img':'static/ylapp/img/ESFP.png', 'worst-img':'static/ylapp/img/ENTJ.png' },
-        "INFJ": { 'best':'자유로운 무계획 사자', 'worst':'호불호가 확실한 선비 사자', 'best-img':'static/ylapp/img/ENFP.png', 'worst-img':'static/ylapp/img/ESTJ.png' },
-        "INTJ": { 'best':'독창적인 발명가 사자', 'worst':'배려심이 많은 다정한 사자', 'best-img':'static/ylapp/img/ENTP.png', 'worst-img':'static/ylapp/img/ESFJ.png' },
-        "ISTP": { 'best':'호불호가 확실한 선비 사자', 'worst':'자유로운 무계획 사자', 'best-img':'static/ylapp/img/ESTJ.png', 'worst-img':'static/ylapp/img/ENFP.png' },
-        "ISFP": { 'best':'배려심이 많은 다정한 사자', 'worst':'독창적인 발명가 사자', 'best-img':'static/ylapp/img/ESFJ.png', 'worst-img':'static/ylapp/img/ENTP.png' },
-        "INFP": { 'best':'정의로운 리더 사자', 'worst':'스릴을 좋아하는 모험가 사자', 'best-img':'static/ylapp/img/ENFJ.png', 'worst-img':'static/ylapp/img/ESTP.png' },
-        "INTP": { 'best':'현실적인 전략가 사자', 'worst':'활동적인 분위기메이커 사자', 'best-img':'static/ylapp/img/ENTJ.png', 'worst-img':'static/ylapp/img/ESFP.png' },
-        "ESTP": { 'best':'철저한 공무원 사자', 'worst':'우유부단 예술가 사자', 'best-img':'static/ylapp/img/ISTJ.png', 'worst-img':'static/ylapp/img/INFP.png' },
-        "ESFP": { 'best':'게으른 완벽주의자 사자', 'worst':'논리적인 로봇 사자', 'best-img':'static/ylapp/img/ISFJ.png', 'worst-img':'static/ylapp/img/INTP.png' },
-        "ENFP": { 'best':'선한 낭만가득 사자', 'worst':'무념무상 만능주의자 사자', 'best-img':'static/ylapp/img/INFJ.png', 'worst-img':'static/ylapp/img/ISTP.png' },
-        "ENTP": { 'best':'가장 차가운 얼음 사자', 'worst':'경계하는 집순이 사자', 'best-img':'static/ylapp/img/INTJ.png', 'worst-img':'static/ylapp/img/ISFP.png' },
-        "ESTJ": { 'best':'무념무상 만능주의자 사자', 'worst':'선한 낭만가득 사자', 'best-img':'static/ylapp/img/ISTP.png', 'worst-img':'static/ylapp/img/INFJ.png' },
-        "ESFJ": { 'best':'경계하는 집순이 사자', 'worst':'가장 차가운 얼음 사자', 'best-img':'static/ylapp/img/ISFP.png', 'worst-img':'static/ylapp/img/INTJ.png' },
-        "ENFJ": { 'best':'우유부단 예술가 사자', 'worst':'철저한 공무원 사자', 'best-img':'static/ylapp/img/INFP.png', 'worst-img':'static/ylapp/img/ISTJ.png' },
-        "ENTJ": { 'best':'논리적인 로봇 사자', 'worst':'게으른 완벽주의자 사자', 'best-img':'static/ylapp/img/INTP.png', 'worst-img':'static/ylapp/img/ISFJ.png' }
+        "ISTJ": { 'best': '스릴을 좋아하는 모험가 사자', 'worst': '정의로운 리더 사자', 'best-img': 'static/ylapp/img/ESTP.png', 'worst-img': 'static/ylapp/img/ENFJ.png' },
+        "ISFJ": { 'best': '활동적인 분위기메이커 사자', 'worst': '현실적인 전략가 사자', 'best-img': 'static/ylapp/img/ESFP.png', 'worst-img': 'static/ylapp/img/ENTJ.png' },
+        "INFJ": { 'best': '자유로운 무계획 사자', 'worst': '호불호가 확실한 선비 사자', 'best-img': 'static/ylapp/img/ENFP.png', 'worst-img': 'static/ylapp/img/ESTJ.png' },
+        "INTJ": { 'best': '독창적인 발명가 사자', 'worst': '배려심이 많은 다정한 사자', 'best-img': 'static/ylapp/img/ENTP.png', 'worst-img': 'static/ylapp/img/ESFJ.png' },
+        "ISTP": { 'best': '호불호가 확실한 선비 사자', 'worst': '자유로운 무계획 사자', 'best-img': 'static/ylapp/img/ESTJ.png', 'worst-img': 'static/ylapp/img/ENFP.png' },
+        "ISFP": { 'best': '배려심이 많은 다정한 사자', 'worst': '독창적인 발명가 사자', 'best-img': 'static/ylapp/img/ESFJ.png', 'worst-img': 'static/ylapp/img/ENTP.png' },
+        "INFP": { 'best': '정의로운 리더 사자', 'worst': '스릴을 좋아하는 모험가 사자', 'best-img': 'static/ylapp/img/ENFJ.png', 'worst-img': 'static/ylapp/img/ESTP.png' },
+        "INTP": { 'best': '현실적인 전략가 사자', 'worst': '활동적인 분위기메이커 사자', 'best-img': 'static/ylapp/img/ENTJ.png', 'worst-img': 'static/ylapp/img/ESFP.png' },
+        "ESTP": { 'best': '철저한 공무원 사자', 'worst': '우유부단 예술가 사자', 'best-img': 'static/ylapp/img/ISTJ.png', 'worst-img': 'static/ylapp/img/INFP.png' },
+        "ESFP": { 'best': '게으른 완벽주의자 사자', 'worst': '논리적인 로봇 사자', 'best-img': 'static/ylapp/img/ISFJ.png', 'worst-img': 'static/ylapp/img/INTP.png' },
+        "ENFP": { 'best': '선한 낭만가득 사자', 'worst': '무념무상 만능주의자 사자', 'best-img': 'static/ylapp/img/INFJ.png', 'worst-img': 'static/ylapp/img/ISTP.png' },
+        "ENTP": { 'best': '가장 차가운 얼음 사자', 'worst': '경계하는 집순이 사자', 'best-img': 'static/ylapp/img/INTJ.png', 'worst-img': 'static/ylapp/img/ISFP.png' },
+        "ESTJ": { 'best': '무념무상 만능주의자 사자', 'worst': '선한 낭만가득 사자', 'best-img': 'static/ylapp/img/ISTP.png', 'worst-img': 'static/ylapp/img/INFJ.png' },
+        "ESFJ": { 'best': '경계하는 집순이 사자', 'worst': '가장 차가운 얼음 사자', 'best-img': 'static/ylapp/img/ISFP.png', 'worst-img': 'static/ylapp/img/INTJ.png' },
+        "ENFJ": { 'best': '우유부단 예술가 사자', 'worst': '철저한 공무원 사자', 'best-img': 'static/ylapp/img/INFP.png', 'worst-img': 'static/ylapp/img/ISTJ.png' },
+        "ENTJ": { 'best': '논리적인 로봇 사자', 'worst': '게으른 완벽주의자 사자', 'best-img': 'static/ylapp/img/INTP.png', 'worst-img': 'static/ylapp/img/ISFJ.png' }
     }
 
     // 메인버튼 눌렀을 때
     function main() {
+        $(".real-index").show();
         $(".index").show();
         $(".start").hide();
         $(".question").hide();
@@ -431,6 +546,7 @@
 
     // 테스트 시작 눌렀을 때
     function situation() {
+        $(".real-index").hide();
         $(".index").hide();
         $(".start").show();
     }
@@ -440,6 +556,12 @@
         $(".start").hide();
         $(".question").show();
         next();
+    }
+
+    // 돌아가기 버튼
+    function back() {
+        $(".show_char").hide()
+        $(".real-index").show();        
     }
 
     // 선택A가 클릭 되었을 때
@@ -481,6 +603,11 @@
             $("#result-lion").html(mbti_information[mbti]["lion"]);
             $("#result-explain").html(mbti_information[mbti]["explain"]);
             $("#result-percentage").html(mbti_percentage[mbti]["percentage"]);
+            // 궁합
+            $("#result-best").html(mbti_matching[mbti]["best"]);
+            $("#result-best-img").attr('src', mbti_matching[mbti]["best-img"]);
+            $("#result-worst").html(mbti_matching[mbti]["worst"]);
+            $("#result-worst-img").attr('src', mbti_matching[mbti]["worst-img"]);
         }
         else {
             $(".progress-bar").attr('style', 'width: calc(100/12*' + num + '%)')
@@ -497,12 +624,15 @@
     function again() {
         num = 1;
         main();
+        $(".real-index").show();
+        $(".all_lions").hide();
     }
 
     // 모든 유형 보기 눌렀을 때
     function all_lions() {
         num = 1;
         order1();
+        $(".real-index").show();
         $(".index").hide();
         $(".all_lions").show();
         $(".result").hide();
@@ -516,6 +646,26 @@
     function order2() {
         $(".order1-con").hide();
         $(".order2-con").show();
+    }
+
+    // 유형별 특징 보이기
+    function show_char() {
+        $(".show_char").show()
+        $(".real-index").hide();
+        $(".result").hide();
+    }
+    function char(mbti) {
+        show_char();
+
+        $("#result-img2").attr('src', mbti_information[mbti]["img"]);
+        $("#result-lion2").html(mbti_information[mbti]["lion"]);
+        $("#result-explain2").html(mbti_information[mbti]["explain"]);
+        $("#result-percentage2").html(mbti_percentage[mbti]["percentage"]);
+        // 궁합
+        $("#result-best2").html(mbti_matching[mbti]["best"]);
+        $("#result-best-img2").attr('src', mbti_matching[mbti]["best-img"]);
+        $("#result-worst2").html(mbti_matching[mbti]["worst"]);
+        $("#result-worst-img2").attr('src', mbti_matching[mbti]["worst-img"]);
     }
 
 

@@ -1041,7 +1041,7 @@ fieldset {
   font-family: 'yg-jalnan';
 }
 .btn-outline-social:hover {
-  color: #8CBD8F;
+  color: #FFC86F;
   background-color: #ffffff;
   border-color: #ffffff;
   font-family: 'yg-jalnan';
@@ -1052,30 +1052,30 @@ fieldset {
   font-family: 'yg-jalnan';
 }
 .btn-outline-main:hover {
-  color: #8CBD8F(255, 255, 255);
+  color: #FFC86F;
   background-color: #ffffff;
   border-color: #ffffff;
   font-family: 'yg-jalnan';
 }
 
 .btn-outline-light {
-  color: #8CBD8F;
-  border-color: #8CBD8F;
-  font-family: 'yg-jalnan';
+  color: #FFC86F;
+  border-color: #FFC86F;
+  font-family: 'Cafe24Ssurround';
 }
 .btn-outline-light:hover {
   color: rgb(255, 255, 255);
-  background-color: #8CBD8F;
-  border-color: #8CBD8F;
-  font-family: 'yg-jalnan';
+  background-color: #FFC86F;
+  border-color: #FFC86F;
+  font-family: 'Cafe24Ssurround';
 }
 .btn-check:focus + .btn-outline-light, .btn-outline-light:focus {
   box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
 }
 .btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
   color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #FFC86F;
+  border-color: #FFC86F;
 }
 .btn-check:checked + .btn-outline-light:focus, .btn-check:active + .btn-outline-light:focus, .btn-outline-light:active:focus, .btn-outline-light.active:focus, .btn-outline-light.dropdown-toggle.show:focus {
   box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
@@ -1083,6 +1083,13 @@ fieldset {
 .btn-outline-light:disabled, .btn-outline-light.disabled {
   color: #f8f9fa;
   background-color: transparent;
+}
+
+.btn-outline-light:visited{
+  color: white;
+  background-color: #FFC86F;
+  border-color: #FFC86F;
+
 }
 
 .collapse:not(.show) {
@@ -1256,7 +1263,7 @@ fieldset {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: rgb(107, 107, 107);
+  background-color: #FFC86F !important;
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
   transition: box-shadow 0.15s ease-in-out;
