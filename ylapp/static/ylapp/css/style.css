@@ -427,3 +427,13 @@ article {
     font-family: 'Pretendard-Regular';
     margin-bottom: 20px;
 }
+
+/* 모든유형사자보기 테스트용... */
+.order-img-con {
+    display: inline-block;
+}
+
+.order-img {
+    width: 100px;
+    height: 100px;
+}
