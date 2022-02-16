@@ -1,0 +1,1 @@
+web: gunicorn ylpj.wsgi --log-file -
