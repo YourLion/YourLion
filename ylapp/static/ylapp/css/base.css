@@ -3013,6 +3013,10 @@ html {
   }
 }
 
+.kakad_ad {
+  width: 320px;
+  margin: 0 auto;
+}
 
 .footer {
   margin-top: 3rem;
